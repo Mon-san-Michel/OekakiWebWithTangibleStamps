@@ -1,0 +1,209 @@
+body{
+    
+    width: 100vw;
+    background-color: #AAAAAA;
+}
+main{
+    margin: 5px;
+    background-color: #AAAAAA;
+    width: 100vw;
+}
+/* div */
+div{
+    width:800px;
+}
+.tool-container{
+    height:60px;
+    background-color: #AAAAAA;
+}
+.pen-size{
+    height:60px;
+    background-color: #AAAAAA;
+}
+.stamp-shape{
+    height:60px;
+    background-color: #AAAAAA;
+}
+.color-palette{
+    height:60px;
+    background-color: #AAAAAA;
+}
+
+/* ラジオボタン周辺 */
+
+input[type=radio]{
+    display:none;
+}
+
+/*
+label{
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+}
+*/
+
+input[type=radio][name="tool"]+label{
+    display:inline-block;
+    background-size:contain;
+    margin:4px;
+    width:120px;
+    height:40px;
+    text-align: center;
+    vertical-align: middle;
+}
+#toolSelectPen+label{
+    border-top-right-radius:50%;
+    border-bottom-right-radius:50%;
+    border-right-width: 20px;
+    /*border-right-color: black;*/
+}
+#toolSelectStamp+label{
+    /*border-top-right-radius:10%;*/
+    /*border-bottom-right-radius:10%;*/
+    border-right-width: 20px;
+    /*border-right-color: black;*/
+}
+
+#save-canvas{
+    margin-top: 3px;
+    display:inline-block;
+    background-size:contain;
+    /*background-color:#AAAAAA;*/
+    width:120px;
+    height:40px;
+}
+
+
+input[type=radio][name="pen-size"]+label{
+    display:inline-block;
+    background-size:contain;
+    margin:4px;
+    width:50px;
+    height:40px;
+    text-align: center;
+    vertical-align: middle;
+}
+#sizeSelectBold+label{
+    border-left-width:10px;
+    border-right:10px solid #000000;
+}
+#sizeSelectBold:checked+label{
+    border-right: 10px solid #000000;
+}
+#sizeSelectNormal+label{
+    border-left-width:5px;
+    border-right: 5px solid #000000;
+}
+#sizeSelectNormal:checked+label{
+    border-right: 5px solid #000000;
+}
+#sizeSelectSharp+label{
+    border-left-width:3px;
+    border-right: 3px solid #000000;
+}
+#sizeSelectSharp:checked+label{
+    border-right: 3px solid #000000;
+}
+
+input[type=radio][name="stamp-shape"]+label{
+    display:inline-block;
+    background-size:contain;
+    margin:4px;
+    width:50px;
+    height:40px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+input[type=radio][name="color"]+label{
+    display:inline-block;
+    background-size:contain;
+    margin:4px;
+    width:50px;
+    height:40px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+input[type=radio][value="black"]+label{
+    color: white;
+    background-color: black;
+}
+input[type=radio][value="white"]+label{
+    color: black;
+    background-color: white;
+}
+
+input[type=radio][value="red"]+label{
+    color: white;
+    background-color: red;
+}
+input[type=radio][value="blue"]+label{
+    color: white;
+    background-color: blue;
+}
+input[type=radio][value="yellow"]+label{
+    color: black;
+    background-color: yellow;
+}
+input[type=radio][value="green"]+label{
+    color: white;
+    background-color: green;
+}
+input[type=radio]+label{
+    border:3px solid #666666;
+}
+input[type=radio]:checked+label{
+    border:3px solid #EEEEEE;
+}
+
+
+/* Canvas and Scanner */
+.canvas-container{
+    /*width:800px;*/
+    /*height:600px;*/
+    background-color: white;
+    border-style: solid;
+    border-color: #777777;
+}
+.canvas{
+    width:800px;
+    height:600px;
+    border-style: none;
+    /*border-color: #777777;*/
+}
+.scanner{
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    /*left: 0px;*/
+    /*top: 0px;*/
+    background-color: #EEEEEE;
+    opacity: 0;
+    border-style: solid;
+    border-color: #EEEEFF;
+    /*touch-action: none;
+    user-select: none;*/
+    z-index: 10;
+    cursor: crosshair;
+}
+.scanner-panel{
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    /*left: 0px;*/
+    /*top: 0px;*/
+    background-color: #EEEEEE;
+    opacity: 0;
+    border-style: solid;
+    border-color: #EEEEFF;
+    /*touch-action: none;
+    user-select: none;*/
+    z-index: 10;
+    cursor: crosshair;
+}
+.invisible{
+    /* Classlist に invisible を追加すると、その要素は非表示になる。 */
+    visibility:hidden;
+}
