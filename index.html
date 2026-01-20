@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset = "utf-8">
+        <meta name="oekaki-web" content="width=device-width, initial-scale=1.0 user-scalable=no">
+        <title>お絵描きWeb</title>
+        <link rel="stylesheet" href="style.css" type="text/css">
+    </head>
+    <body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"></script>
+        <!--
+        <header>
+            <div class="header-menu"></div>
+        </header>
+        -->
+        <div class="main">
+            <div class="tool-container">
+                <!--スタンプの形、ペンの太さを選択する。消しゴムは……背景色に塗る、ぐらいでいいかも-->
+                <!--
+                <input type="radio" name="tool" value="hand" id="toolSelecthand">
+                <label for="toolSelecthand">うごかす</label>
+                -->
+                <input type="radio" name="tool" value="pen" id="toolSelectPen" checked>
+                <label for="toolSelectPen">ペンで描画</label>
+                <input type="radio" name="tool" value="stamp" id="toolSelectStamp">
+                <label for="toolSelectStamp">スタンプで描画</label>
+                <!--<button id="clear-canvas">クリア</button>-->
+	            <button type="button" id="save-canvas">画像を保存</button>
+            </div>
+            
+            <div class = "pen-size" id="pen-size-box">
+                <input type="radio" name="pen-size" value="10" id="sizeSelectBold">
+                <label for="sizeSelectBold">太</label>
+                <input type="radio" name="pen-size" value="5" id="sizeSelectNormal" checked>
+                <label for="sizeSelectNormal">中</label>
+                <input type="radio" name="pen-size" value="3" id="sizeSelectSharp">
+                <label for="sizeSelectSharp">細</label>
+            </div>
+            
+            <div class = "stamp-shape" id="stamp-shape-box">
+                <input type="radio" name="stamp-shape" value="circle" id="stampSelectCircle" checked>
+                <label for="stampSelectCircle">丸型</label>
+                <input type="radio" name="stamp-shape" value="triangle" id="stampSelectTriangle">
+                <label for="stampSelectTriangle">三角</label>
+                <input type="radio" name="stamp-shape" value="square" id="stampSelectSquare">
+                <label for="stampSelectSquare">四角</label>
+                <input type="radio" name="stamp-shape" value="star-shape" id="stampSelectStarshape">
+                <label for="stampSelectStarshape">星型</label>
+            </div>
+            <div class="scanner-panel" id="scanner-panel"></div>
+                <canvas id="canvas"></canvas>
+            
+            <div class="color-palette">
+                <!--カラーパレット。色を選択する。-->
+                <!--<form id="color-select">-->
+                    <input type="radio" name="color" value="black" id="colorSelectBlack" checked>
+                    <label for="colorSelectBlack">黒</label>
+                    <input type="radio" name="color" value="white" id="colorSelectWhite">
+                    <label for="colorSelectWhite">白</label>
+                    <input type="radio" name="color" value="red" id="colorSelectRed">
+                    <label for="colorSelectRed">赤</label>
+                    <input type="radio" name="color" value="blue" id="colorSelectBlue">
+                    <label for="colorSelectBlue">青</label>
+                    <input type="radio" name="color" value="yellow" id="colorSelectYellow">
+                    <label for="colorSelectYellow">黄</label>
+                    <input type="radio" name="color" value="green" id="colorSelectGreen">
+                    <label for="colorSelectGreen">緑</label>
+                <!--</form>-->
+                
+            </div>
+        </div>
+        <div class="text" id="text_result">message will be wrote here.</div>
+        <div class="text" id="text_result1">message will be wrote here.</div>
+        <div class="text" id="text_result2">message will be wrote here.</div>
+        <div class="text" id="text_result3">message will be wrote here.</div>
+        <script src="script-3.js"></script>
+        <script src="scanner3.js"></script>
+    </body>
+</html>
