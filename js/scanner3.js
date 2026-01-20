@@ -59,7 +59,7 @@ class Scanner {
         });
 
         this.scanner.addEventListener("touchmove", (event) => {
-             //this.touchAction(event);
+             this.touchAction(event);
         });
 
         this.scanner.addEventListener("touchend", (event) => {
