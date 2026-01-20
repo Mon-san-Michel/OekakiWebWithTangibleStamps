@@ -42,7 +42,7 @@ label{
   cursor: pointer;
 }
 */
-
+/* ツール選択 */
 input[type=radio][name="tool"]+label{
     display:inline-block;
     background-size:contain;
@@ -74,7 +74,7 @@ input[type=radio][name="tool"]+label{
     height:40px;
 }
 
-
+/* ペンサイズ選択 */
 input[type=radio][name="pen-size"]+label{
     display:inline-block;
     background-size:contain;
@@ -106,6 +106,7 @@ input[type=radio][name="pen-size"]+label{
     border-right: 3px solid #000000;
 }
 
+/* スタンプの形の選択 */
 input[type=radio][name="stamp-shape"]+label{
     display:inline-block;
     background-size:contain;
@@ -116,6 +117,7 @@ input[type=radio][name="stamp-shape"]+label{
     vertical-align: middle;
 }
 
+/* 色選択 */
 input[type=radio][name="color"]+label{
     display:inline-block;
     background-size:contain;
