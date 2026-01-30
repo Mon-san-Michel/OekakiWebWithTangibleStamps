@@ -21,16 +21,18 @@ div{
     background-color: #AAAAAA;
     display: flex;
 }
-/*
+
 .pen-size{
     height:60px;
+    width:240px;
     background-color: #AAAAAA;
 }
 .stamp-shape{
     height:60px;
+    width:300px;
     background-color: #AAAAAA;
 }
-*/
+
 .color-palette{
     height:60px;
     background-color: #AAAAAA;
