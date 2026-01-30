@@ -214,6 +214,19 @@ class Painter{
                 console.log("Now tool is " + this.checkTool() + ".");
             }
         });
+        //背景色変更の反映
+        document.getElementById("backcolorisNone").addEventListener('change', (event) => {
+            this.canvas.backgroundColor=none;
+            console.log("Now backgroundcolor is clear.");
+        });
+        document.getElementById("backcolorisWhite").addEventListener('change', (event) => {
+            this.canvas.backgroundColor="white";
+            console.log("Now backgroundcolor is white.");
+        });
+        document.getElementById("backcoloris").addEventListener('change', (event) => {
+            this.canvas.backgroundColor="black";
+            console.log("Now backgroundcolor is black.");
+        });
     }
     
     init(canvas){
