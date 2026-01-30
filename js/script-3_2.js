@@ -223,7 +223,7 @@ class Painter{
             this.canvas.backgroundColor="white";
             console.log("Now backgroundcolor is white.");
         });
-        document.getElementById("backcoloris").addEventListener('change', (event) => {
+        document.getElementById("backcolorisBlack").addEventListener('change', (event) => {
             this.canvas.backgroundColor="black";
             console.log("Now backgroundcolor is black.");
         });
