@@ -19,7 +19,7 @@ div{
 .size-and-shape{
     height:60px;
     background-color: #AAAAAA;
-    display: inline;
+    display: flex;
 }
 .pen-size{
     height:60px;
