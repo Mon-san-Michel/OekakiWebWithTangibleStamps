@@ -48,12 +48,8 @@
                     <label for="stampSelectStarshape">星型</label>
                 </div>
             </div>
-            
-            <div class="scanner-panel" id="scanner-panel"></div>
-                <canvas id="canvas"></canvas>
-            
             <div class="color-palette">
-                <!--カラーパレット。色を選択する。-->
+                <!--カラーパレット。ペンとスタンプの色を選択する。-->
                 <!--<form id="color-select">-->
                     <input type="radio" name="color" value="black" id="colorSelectBlack" checked>
                     <label for="colorSelectBlack">黒</label>
@@ -68,8 +64,18 @@
                     <input type="radio" name="color" value="green" id="colorSelectGreen">
                     <label for="colorSelectGreen">緑</label>
                 <!--</form>-->
+                <!--背景の色を選択する。-->
+                <input type="radio" name="backgroundcolor" id="backcolorisNone">
+                <label for="backcolorisNone">無</label>
+                <input type="radio" name="backgroundcolor" id="backcolorisWhite">
+                <label for="backcolorisWhite">白</label>
+                <input type="radio" name="backgroundcolor" id="backcolorisBlack">
+                <label for="backcolorisBlack">黒</label>
                 
             </div>
+            <div class="scanner-panel" id="scanner-panel"></div>
+                <canvas id="canvas"></canvas>
+            
         </div>
         <div class="text" id="text_result">message will be wrote here.</div>
         <div class="text" id="text_result1">message will be wrote here.</div>
