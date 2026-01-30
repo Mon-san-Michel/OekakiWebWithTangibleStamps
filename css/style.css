@@ -169,6 +169,21 @@ input[type=radio]:checked+label{
     border:3px solid #EEEEEE;
 }
 
+input[type=radio][name="backgroundcolor"]+label{
+    display:inline-block;
+    background-size:contain;
+    margin:4px;
+    width:50px;
+    height:40px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+input[type=radio][value="none"]+label{
+    color: black;
+    background-color: #AAAAAA;
+}
+
 
 /* Canvas and Scanner */
 .canvas-container{
