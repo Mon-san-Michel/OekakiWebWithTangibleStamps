@@ -216,15 +216,15 @@ class Painter{
         });
         //背景色変更の反映
         document.getElementById("backcolorisNone").addEventListener('change', (event) => {
-            this.canvas.backgroundColor=none;
+            this._bgcChange(this.canvas, none);
             console.log("Now backgroundcolor is clear.");
         });
         document.getElementById("backcolorisWhite").addEventListener('change', (event) => {
-            this.canvas.backgroundColor="white";
+            this._bgcChange(this.canvas, "white");
             console.log("Now backgroundcolor is white.");
         });
         document.getElementById("backcolorisBlack").addEventListener('change', (event) => {
-            this.canvas.backgroundColor="black";
+            this._bgcChange(this.canvas, "black");
             console.log("Now backgroundcolor is black.");
         });
     }
@@ -315,6 +315,9 @@ class Painter{
         this.activateScanner(document.getElementById("scanner-panel"));
         this.catchStamp();
         console.log("Tool is " + this.selected_tool + " & color:" + this.selected_color + ", shape:" + this.selected_shape + ".");
+    }
+    _bgcChange(canvas, color){
+        canvas.backgroundColor = color;
     }
     
     //スキャナーを出す
