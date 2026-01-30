@@ -49,8 +49,8 @@
                 </div>
             </div>
             <div class="color-palette">
-                <!--カラーパレット。ペンとスタンプの色を選択する。-->
-                <!--<form id="color-select">-->
+                <div name="color-select" id="color-select">
+                    <!--カラーパレット。ペンとスタンプの色を選択する。-->
                     <input type="radio" name="color" value="black" id="colorSelectBlack" checked>
                     <label for="colorSelectBlack">黒</label>
                     <input type="radio" name="color" value="white" id="colorSelectWhite">
@@ -63,15 +63,16 @@
                     <label for="colorSelectYellow">黄</label>
                     <input type="radio" name="color" value="green" id="colorSelectGreen">
                     <label for="colorSelectGreen">緑</label>
-                <!--</form>-->
-                <!--背景の色を選択する。-->
-                <input type="radio" name="backgroundcolor" value="none" id="backcolorisNone" checked>
-                <label for="backcolorisNone">無</label>
-                <input type="radio" name="backgroundcolor" value="white" id="backcolorisWhite">
-                <label for="backcolorisWhite">白</label>
-                <input type="radio" name="backgroundcolor" value="black" id="backcolorisBlack">
-                <label for="backcolorisBlack">黒</label>
-                
+                </div>
+                <div name="bgc-select">
+                    <!--背景の色を選択する。-->
+                    <input type="radio" name="backgroundcolor" value="none" id="backcolorisNone" checked>
+                    <label for="backcolorisNone">無</label>
+                    <input type="radio" name="backgroundcolor" value="white" id="backcolorisWhite">
+                    <label for="backcolorisWhite">白</label>
+                    <input type="radio" name="backgroundcolor" value="black" id="backcolorisBlack">
+                    <label for="backcolorisBlack">黒</label>
+                </div>
             </div>
             <div class="scanner-panel" id="scanner-panel"></div>
                 <canvas id="canvas"></canvas>

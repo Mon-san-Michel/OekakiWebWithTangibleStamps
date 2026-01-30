@@ -36,7 +36,19 @@ div{
 .color-palette{
     height:60px;
     background-color: #AAAAAA;
+    display: flex;
 }
+.color-select{
+    height:60px;
+    width:400px;
+    background-color: #AAAAAA;
+}
+.bgc-select{
+    height:60px;
+    width:240px;
+    background-color: #AAAAAA;
+}
+
 
 /* ラジオボタン周辺 */
 
