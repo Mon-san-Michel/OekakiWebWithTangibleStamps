@@ -216,7 +216,7 @@ class Painter{
         });
         //背景色変更の反映
         document.getElementById("backcolorisNone").addEventListener('change', (event) => {
-            this._bgcChange(this.canvas, none);
+            this._bgcChange(this.canvas, null);
             console.log("Now backgroundcolor is clear.");
         });
         document.getElementById("backcolorisWhite").addEventListener('change', (event) => {
