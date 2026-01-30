@@ -313,8 +313,11 @@ class Painter{
         this.catchStamp();
         console.log("Tool is " + this.selected_tool + " & color:" + this.selected_color + ", shape:" + this.selected_shape + ".");
     }
+
+    //背景色の変更
     _bgcChange(canvas, color){
         canvas.backgroundColor = color;
+        canvas.renderAll();
     }
     
     //スキャナーを出す
