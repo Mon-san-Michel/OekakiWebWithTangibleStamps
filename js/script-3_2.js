@@ -242,10 +242,7 @@ class Painter{
         
         //this.scanner.init(canvas);
     }
-    /*
-    //canvasを白で塗りつぶす。
-    _clearCanvas(){}
-    */
+    
     /*--変更反映用メソッド--*/
     //ツールの確認
     checkTool(){
