@@ -217,12 +217,12 @@ class Scanner {
         // Measure distances
         this.minDistance = Number.MAX_SAFE_INTEGER;
         this.maxDistance = 0;
-            
+        /*    
         document.getElementById("text_result").textContent = "touched at " + touches.length + " points.";
         document.getElementById("text_result1").textContent = "1(x,y) = (" + this.touchPos[0].x + "," + this.touchPos[0].y + ").";
         document.getElementById("text_result2").textContent = "2(x,y) = (" + this.touchPos[1].x + "," + this.touchPos[1].y + ").";
         document.getElementById("text_result3").textContent = "3(x,y) = (" + this.touchPos[2].x + "," + this.touchPos[2].y + ").";
-    
+        */
         for (let i=0; i < touches.length; i++) {
             for (let j = i+1; j < touches.length; j++) {
                 const dx = this.touchPos[j].x - this.touchPos[i].x;
@@ -335,7 +335,8 @@ class Scanner {
             obj.degrees = this.degrees; //angle
             obj.id = this.markerId; //markerId
             obj.time = this.time; //time
-            document.getElementById("text_result").textContent = "Stamp will be pushed at (" + this.posX + "," + this.posY + ").";
+            document.getElementById("text_result1").textContent = "Stamp will be pushed at (" + this.posX + "," + this.posY + ").";
+            document.getElementById("text_result2").textContent = "markerId is " + this.posX + this.markerId + " .";
             this.updated = false;
             return true;
         }
