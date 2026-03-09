@@ -335,8 +335,8 @@ class Scanner {
             obj.degrees = this.degrees; //angle
             obj.id = this.markerId; //markerId
             obj.time = this.time; //time
-            document.getElementById("text_result1").textContent = "Stamp will be pushed at (" + this.posX + "," + this.posY + ").";
-            document.getElementById("text_result2").textContent = "markerId is " + this.markerId + " .";
+            //document.getElementById("text_result1").textContent = "Stamp will be pushed at (" + this.posX + "," + this.posY + ").";
+            //document.getElementById("text_result2").textContent = "markerId is " + this.markerId + " .";
             this.updated = false;
             return true;
         }

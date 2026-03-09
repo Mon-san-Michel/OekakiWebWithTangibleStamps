@@ -378,6 +378,7 @@ class Painter{
                 this.paintStamp(pushX, pushY, a, s);
                 console.log("Stamp pushed at (" + pushX + "," + pushY + ").");
                 document.getElementById("text_result").textContent = "Stamp pushed at (" + pushX + "," + pushY + ").";
+                document.getElementById("text_result2").textContent = "Stamp pushed at " + id + " .";
                 document.getElementById("text_result3").textContent = "Shape of pushed stamp is " + s + " .";
             }
             requestAnimationFrame(() => {
