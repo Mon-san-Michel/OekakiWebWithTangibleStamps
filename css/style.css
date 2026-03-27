@@ -49,6 +49,7 @@ div{
     background-color: #AAAAAA;
 }
 .material-symbols-outlined {
+    display: flex;
   font-variation-settings:
   'FILL' 0,
   'wght' 400,
