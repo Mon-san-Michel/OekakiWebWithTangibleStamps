@@ -103,7 +103,7 @@ input[type=radio][name="tool"]+label{
     /*border-right-color: black;*/
 }
 
-#save-canvas+label{
+#save-canvas{
     margin-top: 3px;
     display:inline-block;
     background-size:contain;
