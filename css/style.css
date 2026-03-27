@@ -82,14 +82,21 @@ input[type=radio][name="tool"]+label{
 }
 #toolSelectPen+label{
     /*border-top-right-radius:10%;*/
-    border-radius:10%;
+    border-radius:30%;
     /*border-width: 20px;*/
     /*border-right-color: black;*/
 }
 
 
 #toolSelectStamp+label{
-    border-radius:10%;
+    border-radius:30%;
+    /*border-bottom-right-radius:10%;*/
+    /*border-right-width: 20px;*/
+    /*border-right-color: black;*/
+}
+
+#toolSelectHand+label{
+    border-radius:30%;
     /*border-bottom-right-radius:10%;*/
     /*border-right-width: 20px;*/
     /*border-right-color: black;*/
@@ -102,6 +109,7 @@ input[type=radio][name="tool"]+label{
     /*background-color:#AAAAAA;*/
     width:120px;
     height:40px;
+    border-radius: 30%;
 }
 
 /* ペンサイズ選択 */
@@ -113,6 +121,7 @@ input[type=radio][name="pen-size"]+label{
     height:40px;
     text-align: center;
     vertical-align: middle;
+    border-radius: 30%;
 }
 #sizeSelectBold+label{
     border-left-width:10px;
