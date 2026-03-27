@@ -23,32 +23,38 @@
                 -->
                 <input type="radio" name="tool" value="pen" id="toolSelectPen" checked>
                 <label for="toolSelectPen"><span class="material-symbols-outlined">stylus_note</span>ペンで描く</label>
+
                 <input type="radio" name="tool" value="stamp" id="toolSelectStamp">
-                <label for="toolSelectStamp">スタンプを押す</label>
-                <input type="radio" name="tool" value="hand" id="toolSelectHand" checked>
-                <label for="toolSelectHand">動かす</label>
+                <label for="toolSelectStamp"><span class="material-symbols-outlined">category</span>スタンプを押す</label>
+
+                <input type="radio" name="tool" value="hand" id="toolSelectHand">
+                <label for="toolSelectHand"><span class="material-symbols-outlined">back_hand</span>動かす</label>
                 <!--<button id="clear-canvas">クリア</button>-->
-	            <button type="button" id="save-canvas">画像を保存</button>
+	            <button type="button" id="save-canvas"><span class="material-symbols-outlined">download</span>画像を保存</button>
             </div>
 
             <div class = "size-and-shape" id = "size-and-shape-box">
                 <div class = "pen-size" id="pen-size-box">
                     <input type="radio" name="pen-size" value="10" id="sizeSelectBold">
-                    <label for="sizeSelectBold">太</label>
+                    <label for="sizeSelectBold"><span class="material-symbols-outlined">pen_size_5</span>太</label>
                     <input type="radio" name="pen-size" value="5" id="sizeSelectNormal" checked>
-                    <label for="sizeSelectNormal">中</label>
+                    <label for="sizeSelectNormal"><span class="material-symbols-outlined">pen_size_3</span>中</label>
                     <input type="radio" name="pen-size" value="3" id="sizeSelectSharp">
-                    <label for="sizeSelectSharp">細</label>
+                    <label for="sizeSelectSharp"><span class="material-symbols-outlined">pen_size_1</span>細</label>
                 </div>
                 <div class = "stamp-shape" id="stamp-shape-box">
+
                     <input type="radio" name="stamp-shape" value="circle" id="stampSelectCircle" checked>
-                    <label for="stampSelectCircle">丸型</label>
+                    <label for="stampSelectCircle"><span class="material-symbols-outlined">circle</span>丸型</label>
+
                     <input type="radio" name="stamp-shape" value="triangle" id="stampSelectTriangle">
-                    <label for="stampSelectTriangle">三角</label>
+                    <label for="stampSelectTriangle"><span class="material-symbols-outlined">change_history</span>三角</label>
+
                     <input type="radio" name="stamp-shape" value="square" id="stampSelectSquare">
-                    <label for="stampSelectSquare">四角</label>
+                    <label for="stampSelectSquare"><span class="material-symbols-outlined">square</span>四角</label>
+
                     <input type="radio" name="stamp-shape" value="star-shape" id="stampSelectStarshape">
-                    <label for="stampSelectStarshape">星型</label>
+                    <label for="stampSelectStarshape"><span class="material-symbols-outlined">star</span>星型</label>
                 </div>
             </div>
             <div class="color-palette">
