@@ -122,7 +122,7 @@ input[type=radio][name="pen-size"]+label{
     height:40px;
     text-align: center;
     vertical-align: middle;
-    /*border-radius: 30%;*/
+    border-radius: 15px;
 }
 #sizeSelectBold+label{
     border-left-width:10px;
@@ -155,6 +155,7 @@ input[type=radio][name="stamp-shape"]+label{
     height:40px;
     text-align: center;
     vertical-align: middle;
+    border-radius: 15px;
 }
 
 /* 色選択 */
@@ -166,6 +167,7 @@ input[type=radio][name="color"]+label{
     height:40px;
     text-align: center;
     vertical-align: middle;
+    border-radius: 15px;
 }
 
 input[type=radio][value="black"]+label{
@@ -208,6 +210,7 @@ input[type=radio][name="backgroundcolor"]+label{
     height:40px;
     text-align: center;
     vertical-align: middle;
+    border-radius: 15px;
 }
 
 input[type=radio][value="none"]+label{
