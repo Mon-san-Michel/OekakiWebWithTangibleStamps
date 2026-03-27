@@ -81,17 +81,17 @@ input[type=radio][name="tool"]+label{
     vertical-align: middle;
 }
 #toolSelectPen+label{
-    border-top-right-radius:50%;
-    border-bottom-right-radius:50%;
-    border-right-width: 20px;
+    /*border-top-right-radius:10%;*/
+    border-radius:10%;
+    /*border-width: 20px;*/
     /*border-right-color: black;*/
 }
 
 
 #toolSelectStamp+label{
-    /*border-top-right-radius:10%;*/
+    border-radius:10%;
     /*border-bottom-right-radius:10%;*/
-    border-right-width: 20px;
+    /*border-right-width: 20px;*/
     /*border-right-color: black;*/
 }
 
