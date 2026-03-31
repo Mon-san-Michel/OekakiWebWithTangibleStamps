@@ -33,7 +33,7 @@ class App{
         //ボタン
         //document.getElementById("clear-canvas").onclick = this.painter._clearCanvas;
         document.getElementById("save-canvas").addEventListener('click', (event) => {this.writeFile();});
-        document.getElementById("save-canvas").addEventListener('click', (event) => {this.painter.deleteObject(canvas);});
+        document.getElementById("delete-object").addEventListener('click', (event) => {this.painter.deleteObject(canvas);});
         
         //ラジオボタン
     }
@@ -493,7 +493,12 @@ class Painter{
 
     //スタンプの削除
     deleteObject(canvas) {
-        canvas.remove(canvas.getActiveObject);
+        const target = canvas.getActiveObject;
+        if(target != null){
+            canvas.remove(target);
+        } else {
+            console.log("Any object is not selected.");
+        }
         canvas.requestRenderAll();
     }
     /*
