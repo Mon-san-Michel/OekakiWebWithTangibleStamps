@@ -33,7 +33,10 @@ class App{
         //ボタン
         //document.getElementById("clear-canvas").onclick = this.painter._clearCanvas;
         document.getElementById("save-canvas").addEventListener('click', (event) => {this.writeFile();});
-        document.getElementById("delete-object").addEventListener('click', (event) => {this.painter.deleteObject(canvas);});
+        document.getElementById("delete-object").addEventListener('click', (event) => {
+            this.painter.deleteObject(canvas);
+            //canvas.remove(canvas.getActiveObject())
+        });
         
         //ラジオボタン
     }
@@ -148,16 +151,11 @@ class Painter{
             this.selected_shape = this.checkShape();
             document.getElementById("toolSelectStamp").checked = true;
             this._toolChangeStamp(this.canvas);
-            //this.paintStamp(250, 350, 70);
         });
         document.getElementById("stampSelectStarshape").addEventListener('change', event => {
             this.selected_shape = this.checkShape();
             document.getElementById("toolSelectStamp").checked = true;
             this._toolChangeStamp(this.canvas);
-            //this.paintStamp(200, 250, 70);
-            //this.paintStamp(200, 350, 140);
-            //this.paintStamp(300, 250, 210);
-            //this.paintStamp(300, 350, 280);
         });
         
         //色変更の反映
@@ -492,8 +490,9 @@ class Painter{
     }
 
     //スタンプの削除
+    
     deleteObject(canvas) {
-        const target = canvas.getActiveObject;
+        let target = canvas.getActiveObject();
         if(target != null){
             canvas.remove(target);
             console.log("Target is deleted.");
@@ -502,6 +501,7 @@ class Painter{
         }
         canvas.requestRenderAll();
     }
+    
     /*
     //スタンプ削除用のボタン
     renderIcon(ctx, left, top, _styleOverride, fabricObject) {
