@@ -33,6 +33,7 @@ class App{
         //ボタン
         //document.getElementById("clear-canvas").onclick = this.painter._clearCanvas;
         document.getElementById("save-canvas").addEventListener('click', (event) => {this.writeFile();});
+        document.getElementById("save-canvas").addEventListener('click', (event) => {this.painter.deleteObject(canvas);});
         
         //ラジオボタン
     }
@@ -496,7 +497,7 @@ class Painter{
         canvas.remove(transform.target);
         canvas.requestRenderAll();
     }
-
+    //スタンプ削除用のボタン
     renderIcon(ctx, left, top, _styleOverride, fabricObject) {
         const size = this.cornerSize;
         ctx.save();
