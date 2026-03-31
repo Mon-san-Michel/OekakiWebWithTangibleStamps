@@ -492,11 +492,11 @@ class Painter{
     }
 
     //スタンプの削除
-    deleteObject(_eventData, transform) {
-        const canvas = transform.target.canvas;
-        canvas.remove(transform.target);
+    deleteObject(canvas) {
+        canvas.remove(canvas.getActiveObject);
         canvas.requestRenderAll();
     }
+    /*
     //スタンプ削除用のボタン
     renderIcon(ctx, left, top, _styleOverride, fabricObject) {
         const size = this.cornerSize;
@@ -505,7 +505,7 @@ class Painter{
         ctx.rotate(fabric.util.degreesToRadians(fabricObject.angle));
         ctx.drawImage(deleteImg, -size / 2, -size / 2, size, size);
         ctx.restore();
-    }
+    }*/
 
     
 }
