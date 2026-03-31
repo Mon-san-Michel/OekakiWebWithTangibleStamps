@@ -496,6 +496,7 @@ class Painter{
         const target = canvas.getActiveObject;
         if(target != null){
             canvas.remove(target);
+            console.log("Target is deleted.");
         } else {
             console.log("Any object is not selected.");
         }
