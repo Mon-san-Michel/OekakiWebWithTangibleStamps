@@ -49,7 +49,7 @@ div{
     background-color: #AAAAAA;
 }
 .material-symbols-outlined {
-    display: inline-block;
+    /*display: inline-block;*/
     text-align: center;
     vertical-align: middle;
   font-variation-settings:
