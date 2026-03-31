@@ -127,6 +127,7 @@ input[type=radio][name="pen-size"]+label{
     vertical-align: middle;
     border-radius: 15px;
 }
+/*
 #sizeSelectBold+label{
     border-left-width:10px;
     border-right:10px solid #000000;
@@ -148,6 +149,7 @@ input[type=radio][name="pen-size"]+label{
 #sizeSelectSharp:checked+label{
     border-right: 3px solid #000000;
 }
+*/
 
 /* スタンプの形の選択 */
 input[type=radio][name="stamp-shape"]+label{
