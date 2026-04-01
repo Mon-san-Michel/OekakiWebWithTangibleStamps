@@ -55,6 +55,7 @@ class Scanner {
         //evebtlistener for Tabs.
         this.scanner.addEventListener("touchstart", (event) => {
             //this.startAction(event);
+            event.preventDefault();
             this.touchAction(event);
         });
 
