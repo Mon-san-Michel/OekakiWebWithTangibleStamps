@@ -452,16 +452,6 @@ class Painter{
 		    angle: angle,
 		    fill: this.selected_color,
 	    });
-        square.controls.deleteControl = new fabric.Control({
-            x: 0.5,
-            y: -0.5,
-            offsetY: 16,
-            cursorStyle: 'pointer',
-            mouseUpHandler: deleteObject,
-            render: renderIcon,
-            cornerSize: 24,
-        });
-
 	    console.log("Square Stamp at (" + center_x + "," + center_y + ").");
 	    this.canvas.add(square);
     }
