@@ -32,7 +32,9 @@ class App{
         
         //ボタン
         //document.getElementById("clear-canvas").onclick = this.painter._clearCanvas;
+
         document.getElementById("save-canvas").addEventListener('click', (event) => {this.writeFile();});
+
         document.getElementById("delete-object").addEventListener('click', (event) => {
             this.painter.deleteObject(canvas);
             //canvas.remove(canvas.getActiveObject())
@@ -309,6 +311,7 @@ class Painter{
     //ツールとしてペンが選択された
     _toolChangePen(canvas){
         this.deactivateScanner(document.getElementById("scanner-panel"));
+        this.deactivateDeleteButton(document.getElementById("delete-object"));
         this.selected_tool = "pen";
         canvas.freeDrawingBrush.width = this.selected_pen_size;
         canvas.freeDrawingBrush.color = this.selected_color;
@@ -318,6 +321,7 @@ class Painter{
     
     //ツールとしてスタンプが選択された
     _toolChangeStamp(canvas){
+        this.deactivateDeleteButton(document.getElementById("delete-object"));
         this.selected_tool = "stamp";
         canvas.isDrawingMode = false;
         canvas.selection = false;
@@ -328,10 +332,11 @@ class Painter{
 
     //ツールとして手が選択された
     _toolChangeHand(canvas){
+        this.deactivateScanner(document.getElementById("scanner-panel"));
         this.selected_tool = "hand";
         canvas.isDrawingMode = false;
         canvas.selection = false;
-        this.deactivateScanner(document.getElementById("scanner-panel"));
+        this.activateDeleteButton(document.getElementById("delete-object"));
         console.log("Tool is " + this.selected_tool + " & color:" + this.selected_color + ", shape:" + this.selected_shape + ".");
     }
 
@@ -357,6 +362,24 @@ class Painter{
         }
         //this.isActive = false;
         console.log("Scanner is Deactivated.");
+    }
+
+    //削除ボタンを出す
+    activateDeleteButton(delete_button){
+        if(delete_button.classList.contains("invisible")){
+            delete_button.classList.remove("invisible");
+        }
+        //this.isActive = true;
+        console.log("DeleteButton is Activated.");
+        
+    }
+    //削除ボタンを消す
+    deactivateDeleteButton(delete_button){
+        if(!delete_button.classList.contains("invisible")){
+            delete_button.classList.add("invisible");
+        }
+        //this.isActive = false;
+        console.log("DeleteButton is Deactivated.");
     }
     
     
