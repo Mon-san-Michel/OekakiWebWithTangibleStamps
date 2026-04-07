@@ -4,8 +4,7 @@ window.onload = () => {
     canvas.freeDrawingBrush = new fabric.PencilBrush(canvas);
     let app = new App(canvas);
     app.init();
-    document.getElementById("text_result1").textContent = "document-width : " + document.documentElement.clientWidth + " .";
-    document.getElementById("text_result2").textContent = "document-height : " + document.documentElement.clientHeight + " .";
+    
 };
 
 class App{
@@ -73,6 +72,9 @@ class App{
 			alert(`エラー: ${ e }`);
 		}
 	}
+
+    document.getElementById("text_result1").textContent = "document-width : " + document.documentElement.clientWidth + " .";
+    document.getElementById("text_result2").textContent = "document-height : " + document.documentElement.clientHeight + " .";
 	
 }
 
