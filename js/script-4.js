@@ -72,9 +72,9 @@ class App{
 			alert(`エラー: ${ e }`);
 		}
 	}
-
-    document.getElementById("text_result1").textContent = "document-width : " + document.documentElement.clientWidth + " .";
-    document.getElementById("text_result2").textContent = "document-height : " + document.documentElement.clientHeight + " .";
+    const htmlelement = document.documentElement;
+    document.getElementById("text_result1").textContent = "document-width : " + htmlelement.clientWidth + " .";
+    document.getElementById("text_result2").textContent = "document-height : " + htmlelement.clientHeight + " .";
 	
 }
 
