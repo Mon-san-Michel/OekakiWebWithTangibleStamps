@@ -19,7 +19,7 @@ class App{
             // bgColor: "#f5720055",
             // bgImage: "url(../images/bgScanner.png)",
             // bgActive: "url(../images/bgActive.png)",
-            text: "Drawing Area",
+            text: "Color Select",
             // showResult: true,
             // showDot: true,
             // dotColor: "#4771ed",
