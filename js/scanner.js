@@ -103,13 +103,13 @@ class Scanner{
 
     
 }
-class InputScanner entend Scanner{
+class InputScanner extends Scanner{
     constructor(param, color){
         super(param);
     }
 }
 
-class PaintScanner extend Scanner{
+class PaintScanner extends Scanner{
     constructor(param, canvas){
         super(param);
         this.painter = new Painter(canvas);

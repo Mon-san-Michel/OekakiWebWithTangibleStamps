@@ -9,6 +9,7 @@ window.onload = () => {
 
 class App{
     constructor(canvas){
+        
         this.canvas = canvas;
         this.input_scanner = new InputScanner({
             element: "input-scanners",
@@ -30,7 +31,7 @@ class App{
             minDistance: 80,
             maxDistance: 182,
         });
-        );
+
         this.paint_scanner = new PaintScanner(
             {
             element: "input-scanners",

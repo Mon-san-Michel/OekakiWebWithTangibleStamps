@@ -1,7 +1,69 @@
+body{
+    
+    width: 100vw; /* px */
+    background-color: #AAAAAA;
+}
+main{
+    margin: 5px;
+    background-color: #AAAAAA;
+    width: 100vw;
+}
+/* 色変更エリア用 */
+.color-change-palette {
+    width: 80px;
+    height: 80px;
+}
+#black-palette{
+  background-color: #000000;
+}
+#white-palette{
+  background-color: #FFFFFF;
+}
+#red-palette{
+  background-color: #FF0000;
+}
+#blue-palette{
+  background-color: #0000FF;
+}
+#green-palette{
+  background-color: #00FF00;
+}
+#yellow-palette{
+  background-color: #FFFF00;
+}
+/*
+#purple-palette{
+  background-color: #8000FF;
+}
+*/
+
+/* 色確認エリア用 */
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 1,
   'wght' 400,
   'GRAD' 0,
   'opsz' 24
+}
+
+#pen-icon {
+  color: #222222;
+}
+#circle-icon {
+  color: #222222;
+}
+#triangle-icon {
+  color: #222222;
+}
+#square-icon {
+  color: #222222;
+}
+#starshape-icon {
+  color: #222222;
+}
+
+/* 描画エリア用 */
+.invisible{
+    /* Classlist に invisible を追加すると、その要素は非表示になる。 */
+    visibility:hidden;
 }

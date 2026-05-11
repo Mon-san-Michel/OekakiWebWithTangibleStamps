@@ -12,28 +12,37 @@
 
         <!---入力用エリア-->
         <div class="input-area">
-            <div class="color-chenge-scanners"></div>
+            <div class="scanners-pannel" id="color-chenge-scanner"></div>
+            <div class="color-input-area">
+                <div id="black-palette" class="color-change-palette"></div>
+                <div id="white-palette" class="color-change-palette"></div>
+                <div id="red-palette" class="color-change-palette"></div>
+                <div id="blue-palette" class="color-change-palette"></div>
+                <div id="yellow-palette" class="color-change-palette"></div>
+                <div id="green-palette" class="color-change-palette"></div>
+                <!-- <div id="purple-palette" class="color-change-palette"></div> -->
+            </div>
             <button type="button" id="save-canvas">
                 <span class="material-symbols-outlined">download</span>画像を保存
             </button>
         </div>
         
         <!--キャンバスエリア-->
-        <div class="paint-scanner-pannel" id="paint-scanner-pannel"></div>
+        <div class="scanners-pannel" id="paint-canvas-scanner"></div>
         <canvas id="canvas"></canvas>
 
         <!--確認用エリア-->
         <div class="color-check-icons">
             <!--pen-->
-            <span class="material-symbols-outlined">stylus_note</span>
+            <span id="pen-icon" class="material-symbols-outlined">stylus_note</span>
             <!--●-->
-            <span class="material-symbols-outlined">circle</span>
+            <span id="circle-icon" class="material-symbols-outlined">circle</span>
             <!--▲-->
-            <span class="material-symbols-outlined">change_history</span>
+            <span id="triangle-icon" class="material-symbols-outlined">change_history</span>
             <!--■-->
-            <span class="material-symbols-outlined">square</span>
+            <span id="square-icon" class="material-symbols-outlined">square</span>
             <!--★-->
-            <span class="material-symbols-outlined">star</span>
+            <span id="starshape-icon" class="material-symbols-outlined">star</span>
         </div>
 
         <div class="text" id="text_result">message will be wrote here.</div>
