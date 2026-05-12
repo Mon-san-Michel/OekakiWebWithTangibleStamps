@@ -16,6 +16,7 @@ main{
 
 /* 色変更エリア用 */
 .input-area{
+  height: 130px;
   position: relative;
 }
 
