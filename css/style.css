@@ -9,22 +9,6 @@ main{
     width: 100vw;
 }
 
-.scanner-panel{
-    position: absolute;
-    /*width: 800px;*/
-    /*height: 600px;*/
-    /*left: 0px;*/
-    /*top: 0px;*/
-    background-color: #EEEEEE;
-    opacity: 0.25;
-    border-style: solid;
-    border-color: #EEEEFF;
-    /*touch-action: none;
-    user-select: none;*/
-    z-index: 10;
-    cursor: crosshair;
-}
-
 .invisible{
     /* Classlist に invisible を追加すると、その要素は非表示になる。 */
     visibility:hidden;
@@ -33,8 +17,16 @@ main{
 /* 色変更エリア用 */
 .color-input-area{
   display: flex;
+  position: relative;
 }
 #color-change-scanner{
+  position: abusolute;left: 0px;
+  top: 0px;
+  background-color: #EEEEEE;
+  opacity: 0.25;
+  border-style: solid;
+  border-color: #EEEEFF;
+  z-index: 10;
   width: 780px;
   height: 130px;
 }
@@ -98,7 +90,12 @@ main{
 }
 
 /* 描画エリア用 */
+.canvas-area{
+  position: relative;
+}
+
 .canvas-container{
+    position: absolute;
     /*width:800px;*/
     /*height:600px;*/
     background-color: white;
@@ -113,6 +110,17 @@ main{
 }
 
 #paint-canvas-scanner{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-color: #EEEEEE;
+    opacity: 0.25;
+    border-style: solid;
+    border-color: #EEEEFF;
+    /*touch-action: none;
+    user-select: none;*/
+    z-index: 10;
+    cursor: crosshair;
     width: 800px;
     height: 600px;
 }
