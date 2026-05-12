@@ -9,6 +9,9 @@ main{
     width: 100vw;
 }
 /* 色変更エリア用 */
+.color-input-area{
+  display: inline;
+}
 .color-change-palette {
     width: 80px;
     height: 80px;
@@ -38,6 +41,9 @@ main{
 */
 
 /* 色確認エリア用 */
+.color-check-area{
+  display: inline;
+}
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 1,
