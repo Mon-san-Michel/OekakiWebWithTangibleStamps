@@ -35,6 +35,8 @@ main{
 
 .color-input-area{
   position: absolute;
+  left: 0px;
+  top: 0px;
   display: flex;
 }
 
@@ -102,6 +104,9 @@ main{
 }
 
 .canvas-container{
+    position: absolute;
+    left: 0px;
+    top: 0px;
     /*width:800px;*/
     /*height:600px;*/
     background-color: white;
@@ -109,8 +114,8 @@ main{
     border-color: #777777;
 }
 .canvas{
-    width:800px;
-    height:600px;
+    /*width:800px;
+    height:600px;*/
     border-style: none;
     /*border-color: #777777;*/
 }
