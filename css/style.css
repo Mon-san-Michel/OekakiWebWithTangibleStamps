@@ -12,9 +12,15 @@ main{
 .color-input-area{
   display: flex;
 }
+#color-change-scanner{
+  width: 780px;
+  height: 130px;
+}
+
 .color-change-palette {
     width: 120px;
     height: 120px;
+    margin: 5px;
 }
 #black-palette{
   background-color: #000000;
@@ -70,6 +76,40 @@ main{
 }
 
 /* 描画エリア用 */
+.canvas-container{
+    /*width:800px;*/
+    /*height:600px;*/
+    background-color: white;
+    border-style: solid;
+    border-color: #777777;
+}
+.canvas{
+    width:800px;
+    height:600px;
+    border-style: none;
+    /*border-color: #777777;*/
+}
+
+.scanner-panel{
+    position: absolute;
+    /*width: 800px;*/
+    /*height: 600px;*/
+    /*left: 0px;*/
+    /*top: 0px;*/
+    background-color: #EEEEEE;
+    opacity: 0.25;
+    border-style: solid;
+    border-color: #EEEEFF;
+    /*touch-action: none;
+    user-select: none;*/
+    z-index: 10;
+    cursor: crosshair;
+}
+#paint-canvas-scanner{
+    width: 800px;
+    height: 600px;
+}
+
 .invisible{
     /* Classlist に invisible を追加すると、その要素は非表示になる。 */
     visibility:hidden;
