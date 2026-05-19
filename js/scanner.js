@@ -47,17 +47,15 @@ class Scanner{
         
         //evebtlistener for Tabs.
         this.scanner.addEventListener("touchstart", (event) => {
-            //this.startAction(event);
             this.touchAction(event);
         });
 
         this.scanner.addEventListener("touchmove", (event) => {
-             //this.touchAction(event);
+            /**/
         });
 
         this.scanner.addEventListener("touchend", (event) => {
-            //this.touchAction(event);
-            // this.endAction(event);
+            /**/
         });
     }
     // ================================================================================================ Actions

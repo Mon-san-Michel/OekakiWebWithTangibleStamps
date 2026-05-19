@@ -2,15 +2,20 @@
 window.onload = () => {
     const canvas = new fabric.Canvas("canvas");
     canvas.freeDrawingBrush = new fabric.PencilBrush(canvas);
+    
     let app = new App(canvas);
-    app.init();
+    //app.init();
     
 };
 
 class App{
     constructor(canvas){
         
+        //canvas setting
         this.canvas = canvas;
+        this.canvas.setWidth(800);
+        this.canvas.setHeight(600);
+        
         this.input_scanner = new InputScanner({
             element: "input-scanners",
             posX: "8px", //body-tag's margin is 8px.
@@ -57,8 +62,6 @@ class App{
     init(){
         //const winsize = window.innerWidth;
         //console.log("winsize = " + winsize + ".");
-        this.canvas.setWidth(800);
-        this.canvas.setHeight(600);
     }
     //画像の出力
     writeFile(){

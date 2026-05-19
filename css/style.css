@@ -29,12 +29,12 @@ main{
   border-style: solid;
   border-color: #EEEEFF;
   z-index: 10;
-  width: 780px;
-  height: 130px;
+  width: 730px;
+  height: 260px;
 }
 
 .color-input-area{
-  position: absolute;
+  /*position: absolute;*/
   left: 0px;
   top: 0px;
   display: flex;
@@ -43,13 +43,7 @@ main{
 .color-change-palette {
     width: 120px;
     height: 120px;
-    margin: 5px;
-}
-#black-palette{
-  background-color: #000000;
-}
-#white-palette{
-  background-color: #FFFFFF;
+    /*margin: 5px;*/
 }
 #red-palette{
   background-color: #FF0000;
@@ -59,6 +53,12 @@ main{
 }
 #green-palette{
   background-color: #00BB00;
+}
+#black-palette{
+  background-color: #000000;
+}
+#white-palette{
+  background-color: #FFFFFF;
 }
 #yellow-palette{
   background-color: #FFFF00;
@@ -132,6 +132,6 @@ main{
     user-select: none;*/
     z-index: 10;
     cursor: crosshair;
-    width: 800px;
-    height: 600px;
+    width: 120px;
+    height: 120px;
 }
