@@ -37,12 +37,14 @@ main{
   position: absolute;
   left: 0px;
   top: 0px;
+  height: 250px;
   display: flex;
 }
 .color-input-area-b {
   position: absolute;
   left: 260px;
   top: 260px;
+  height: 250px;
   display: flex;
 }
 
