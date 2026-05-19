@@ -18,7 +18,7 @@ main{
 .input-area{
   height: 520px;
   position: relative;
-  background-color: #FF8800;
+  /*background-color: #FF8800;*/
 }
 
 #color-change-scanner{
@@ -110,7 +110,7 @@ main{
 /* 描画エリア用 */
 .canvas-area{
   position: relative;
-  background-color: #8800FF;
+  /*background-color: #8800FF;*/
 }
 
 .canvas-container{
