@@ -16,7 +16,7 @@ main{
 
 /* 色変更エリア用 */
 .input-area{
-  height: 130px;
+  height: 520px;
   position: relative;
 }
 
@@ -30,7 +30,7 @@ main{
   border-color: #EEEEFF;
   z-index: 10;
   width: 730px;
-  height: 510px;
+  height: 520px;
 }
 
 .color-input-area-a {
@@ -51,7 +51,7 @@ main{
 .color-change-palette {
     width: 250px;
     height: 250px;
-    /*margin: 5px;*/
+    margin: 5px;
 }
 #red-palette{
   background-color: #FF0000;
