@@ -30,19 +30,25 @@ main{
   border-color: #EEEEFF;
   z-index: 10;
   width: 730px;
-  height: 260px;
+  height: 510px;
 }
 
-.color-input-area{
-  /*position: absolute;*/
+.color-input-area-a {
+  position: absolute;
   left: 0px;
   top: 0px;
   display: flex;
 }
+.color-input-area-b {
+  position: absolute;
+  left: 260px;
+  top: 260px;
+  display: flex;
+}
 
 .color-change-palette {
-    width: 120px;
-    height: 120px;
+    width: 250px;
+    height: 250px;
     /*margin: 5px;*/
 }
 #red-palette{
