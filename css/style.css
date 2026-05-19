@@ -29,7 +29,7 @@ main{
   border-style: solid;
   border-color: #EEEEFF;
   z-index: 10;
-  width: 730px;
+  width: 780px;
   height: 520px;
 }
 
@@ -42,7 +42,7 @@ main{
 }
 .color-input-area-b {
   position: absolute;
-  left: 260px;
+  left: 0px;
   top: 260px;
   height: 250px;
   display: flex;
