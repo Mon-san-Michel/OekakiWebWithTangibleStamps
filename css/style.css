@@ -15,7 +15,7 @@ main{
 
 /* 色変更エリア用 */
 .input-area{
-  height: 526px;
+  /*height: 526px;*/
   margin:0;
   position: relative;
   /*background-color: #FF8800;*/
