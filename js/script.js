@@ -21,7 +21,7 @@ class App{
             posX: "8px", //body-tag's margin is 8px.
             posY: "188px", //body-tag's margin is 8px + div-tags' height 60 * 3.
             width: "720px", //比率は2480×3508に近くなるようにしたい
-            height: "460px",
+            height: "480px",
             // bgColor: "#f5720055",
             // bgImage: "url(../images/bgScanner.png)",
             // bgActive: "url(../images/bgActive.png)",
