@@ -4,7 +4,7 @@ window.onload = () => {
     canvas.freeDrawingBrush = new fabric.PencilBrush(canvas);
     
     let app = new App(canvas);
-    //app.init();
+    app.init();
     
 };
 
@@ -52,6 +52,7 @@ class App{
             // showDot: true,
             // dotColor: "#4771ed",
         }, this.canvas);
+        
         // Scanner ID Setup (works for Redmi Tab only)
         this.paint_scanner.setId({
             minDistance: 80,
@@ -60,8 +61,8 @@ class App{
     }
 
     init(){
-        //const winsize = window.innerWidth;
-        //console.log("winsize = " + winsize + ".");
+        const winsize = window.innerWidth;
+        console.log("winsize = " + winsize + ".");
     }
     //画像の出力
     writeFile(){
