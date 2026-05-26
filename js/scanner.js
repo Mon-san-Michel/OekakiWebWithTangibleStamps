@@ -60,8 +60,14 @@ class Scanner{
     }
     // ================================================================================================ Actions
 
-    touchAction(){
-        console.log("no action is setted yet.");
+    touchAction(event){
+        const touches = Array.from(event.touches).filter(touch => touch.target === this.scanner);
+
+        if (touches.length == 3) {
+            event.preventDefault();
+            /*--document.getElementById("text_result").innnerHTML = touches;--*/
+            this.readMarker(touches);
+        }
     }
 
     // ================================================================================================ SETTERS
@@ -99,11 +105,160 @@ class Scanner{
         if (param.dotColor) this.dotColor = param.dotColor;
     }
 
+    // ============================================================================================ READ MARKER
+
+    readMarker (touches) {
+        this.touchPos = [];
+        //this.updated = true;
+        document.getElementById("text_result2").textContent = "readMarker is active.";
+        
+        
+        // Set position
+        let maxX = 0;
+        let minX = Number.MAX_SAFE_INTEGER;
+        let maxY = 0;
+        let minY = Number.MAX_SAFE_INTEGER;
+        
+        let posData = {};    
+        
+        // ================================================================================ READ EACH TOUCH
+        
+        for (let i=0; i < touches.length; i++) {
+            const touch = touches[i];
+            
+            const touchId = touch.identifier;
+
+            // Read touch position
+            const x = touch.clientX - this.scanner.getBoundingClientRect().left;
+            const y = touch.clientY - this.scanner.getBoundingClientRect().top;
+
+            // Check max and min points for position detection 
+            if (x > maxX) maxX = x;
+            if (x < minX) minX = x;
+            if (y > maxY) maxY = y;
+            if (y < minY) minY = y;
+                
+            this.touchPos.push({x, y});
+        }
+        
+        // Measure distances
+        this.minDistance = Number.MAX_SAFE_INTEGER;
+        this.maxDistance = 0;
+        /*    
+        document.getElementById("text_result").textContent = "touched at " + touches.length + " points.";
+        document.getElementById("text_result1").textContent = "1(x,y) = (" + this.touchPos[0].x + "," + this.touchPos[0].y + ").";
+        document.getElementById("text_result2").textContent = "2(x,y) = (" + this.touchPos[1].x + "," + this.touchPos[1].y + ").";
+        document.getElementById("text_result3").textContent = "3(x,y) = (" + this.touchPos[2].x + "," + this.touchPos[2].y + ").";
+        */
+        for (let i=0; i < touches.length; i++) {
+            for (let j = i+1; j < touches.length; j++) {
+                const dx = this.touchPos[j].x - this.touchPos[i].x;
+                const dy = this.touchPos[j].y - this.touchPos[i].y;
+                const result = Math.round(Math.sqrt((dx * dx) + (dy * dy)));
+
+                if (result < this.minDistance) {
+                    this.minDistance = result;
+                    //document.getElementById("text_result").textContent = "result = " + result + " .";
+    
+                    posData.x1Min = Math.min(this.touchPos[i].x, this.touchPos[j].x);
+                    posData.y1Min = Math.min(this.touchPos[i].y, this.touchPos[j].y);
+
+                    posData.x1 = Math.round(Math.abs(dx/2) + posData.x1Min);
+                    posData.y1 = Math.round(Math.abs(dy/2) + posData.y1Min);
+    
+                    for (let n=0; n < touches.length; n++){
+                        if (this.touchPos[n].x != this.touchPos[i].x && this.touchPos[n].x != this.touchPos[j].x) {
+                            posData.x2 = Math.round(this.touchPos[n].x);
+                            posData.y2 = Math.round(this.touchPos[n].y);
+                        }
+                    }
+                }
+
+                if (result > this.maxDistance) {
+                    this.maxDistance = result;
+                    //document.getElementById("text_result").textContent = "result = " + result + " .";
+                }
+            }
+        }
+            
+        //document.getElementById("text_result3").textContent = "touched at" + this.touchPos + ".";
+            
+        // ================================================================================= Measure distances
+        posData.xPosMin = 0;//Math.min(posData.x1, posData.x2);
+        posData.yPosMin = 0;//Math.min(posData.y1, posData.y2);
+    
+        this.posX = Math.round(Math.abs((posData.x1+posData.x2)/2 + posData.xPosMin));
+        this.posY = Math.round(Math.abs((posData.y1+posData.y2)/2 + posData.yPosMin));
+            
+        //document.getElementById("text_result").textContent = "Stamp will be pushed at (" + this.posX + "," + this.posY + ").";
+    
+        // ================================================================================= Measure degree
+        // Set angle
+        const rad = Math.atan2(posData.y2-posData.y1, posData.x2-posData.x1);
+    
+        let deg = (rad * 180) / Math.PI;
+        deg += 90;
+    
+        if (deg < 0) {
+            deg += 360;
+        }
+
+            this.degrees = Math.round(deg);
+            
+            // ================================================================================= Set the ID
+            this.markerId = 0;
+            var minId = 0;
+            var maxId = 0;
+    
+            if (this.referenceId) {
+                this.referenceId.forEach((value, i) => {
+                    if (this.minDistance > value - this.tolerance && this.minDistance < value + this.tolerance) {
+                        minId = i + 1;
+                    }
+    
+                    if (this.maxDistance > value - this.tolerance && this.maxDistance < value + this.tolerance) {
+                        maxId = i + 1;
+                    }
+                });
+    
+                switch (minId) {
+                    //後で適切な4つの選択肢に変えること。
+                    case 1 : this.markerId = maxId + 0; break;
+                    case 2 : this.markerId = maxId + 5; break;
+                    case 3 : this.markerId = maxId + 9; break;
+                    case 4 : this.markerId = maxId + 12; break;
+                    //case 5 : this.markerId = maxId + 14; break;
+                    //case 6 : this.markerId = maxId + 15; break;
+                }
+            }
+            
+            //document.getElementById("text_result3").textContent = "readMarker is actually active?";
+            this.updated = true;
+
+        // ================================================================================= Timer
+        // Remove dot after a few miliseconds
+        this.time = performance.now() - this.startTime;
+        this.time += 0.2;
+        this.time = this.time.toFixed(2);
+
+        // ================================================================================= Development Mode
+        if (this.devMode) {
+            this.scanText.textContent = `Min: ${this.minDistance} | Max: ${this.maxDistance}`;
+        }
+
+    }
+
     
 }
 class InputScanner extends Scanner{
     constructor(param, color){
         super(param);
+    }
+
+    touchAction(event){
+        super.touchAction(event);
+        //this.posXとthis.posYから色を指定。
+        //markerIdからツールを指定。
     }
 }
 
@@ -111,5 +266,12 @@ class PaintScanner extends Scanner{
     constructor(param, canvas){
         super(param);
         this.painter = new Painter(canvas);
+    }
+
+    touchAction(event){
+        super.touchAction(event);
+        //this.posXとthis.posYからスタンプを押す座標を指定。
+        //this.degreesで角度を指定。
+        //markerIdからツールを指定。
     }
 }

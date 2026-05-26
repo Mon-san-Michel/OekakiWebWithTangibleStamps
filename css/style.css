@@ -53,6 +53,7 @@ main{
     width: 250px;
     height: 250px;
     margin: 5px;
+    border-radius: 10%;
 }
 #red-palette{
   background-color: #FF0000;
