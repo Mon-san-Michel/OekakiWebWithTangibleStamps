@@ -1,8 +1,8 @@
 class Scanner{
     constructor(param){
         this.scanner = document.getElementById(param.element);
-        this.scanText = document.createElement("span");
-        this.scanner.append(this.scanText);
+        //this.scanText = document.createElement("span");
+        //this.scanner.append(this.scanText);
 
         if(param.text)this.scanText.textContent = param.text;
         if (param.posX) this.scanner.style.left = param.posX;
