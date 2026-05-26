@@ -20,8 +20,8 @@ class App{
             element: "color-change-scanner",
             posX: "8px", //body-tag's margin is 8px.
             posY: "188px", //body-tag's margin is 8px + div-tags' height 60 * 3.
-            width: "780px", //比率は2480×3508に近くなるようにしたい
-            height: "520px",
+            width: "720px", //比率は2480×3508に近くなるようにしたい
+            height: "460px",
             // bgColor: "#f5720055",
             // bgImage: "url(../images/bgScanner.png)",
             // bgActive: "url(../images/bgActive.png)",
@@ -42,7 +42,7 @@ class App{
             element: "paint-canvas-scanner",
             posX: "8px", //body-tag's margin is 8px.
             posY: "188px", //body-tag's margin is 8px + div-tags' height 60 * 3.
-            width: "764px",
+            width: "720px",
             height: "540px",
             // bgColor: "#f5720055",
             // bgImage: "url(../images/bgScanner.png)",
