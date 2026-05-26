@@ -13,8 +13,8 @@ class App{
         
         //canvas setting
         this.canvas = canvas;
-        this.canvas.setWidth(800);
-        this.canvas.setHeight(600);
+        this.canvas.setWidth(764);
+        this.canvas.setHeight(540);
         
         this.input_scanner = new InputScanner({
             element: "input-scanners",
