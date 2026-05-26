@@ -1,23 +1,67 @@
 class Painter {
     constructor(canvas){
         this.canvas = canvas;
+        this.pen_color = "#222222";
+        this.circle_color = "#222222";
+        this.triangle_color = "#222222";
+        this.square_color = "#222222";
+        this.starshape_color = "#222222";
     }
 
     //色の確認
     checkColor(tool){
         //指定されたツールの色を確認する。
+        let selected_color = "#222222";
+        switch(tool){
+            case "pen": selected_color = this.pen_color; break;
+            case "circle": selected_color = this.circle_color; break;
+            case "triangle": selected_color = this.triangle_color; break;
+            case "square": selected_color = this.square_color; break;
+            case "starshape": selected_color = this.starshape_color; break;
+        }
         return selected_color;
+    }
+    changeColor(tool, color){
+        switch(tool){
+            case "pen": this.pen_color = color; document.getElementById("pen-icon").style.color = color; break;
+            case "circle": this.circle_color = color; document.getElementById("circle-icon").style.color = color; break;
+            case "triangle": this.triangle_color = color; document.getElementById("triangle-icon").style.color = color; break;
+            case "square": this.square_color = color; document.getElementById("square-icon").style.color = color; break;
+            case "starshape": this.starshape_color = color; document.getElementById("starshape-icon").style.color = color; break;
+        }
+    }
+
+    _ToolChangeToPen(){
+        document.getElementById("pen-icon").style.color = checkColor("pen");
+
+        document.getElementById("circle-icon").style.color = "#888888"; //カラーブレンド用の関数にして、元の色がわかるようにするべきかも
+        document.getElementById("triangle-icon").style.color = "#888888";
+        document.getElementById("square-icon").style.color = "#888888";
+        document.getElementById("starshape-icon").style.color = "#888888";
+
+        canvas.isDrawingMode = true;
+
+    }
+    _ToolChangeToStamp(){
+        document.getElementById("pen-icon").style.color = "#888888";
+
+        document.getElementById("circle-icon").style.color = checkColor("circle");
+        document.getElementById("triangle-icon").style.color = checkColor("triangle");
+        document.getElementById("square-icon").style.color = checkColor("square");
+        document.getElementById("starshape-icon").style.color = checkColor("starshape");
+
+        canvas.isDrawingMode = false;
     }
 
     //スタンプが押されると、種類に応じて描画
     paintStamp(center_x, center_y, angle, shape){
-        if(shape == null) shape = this.selected_shape;
+        //if(shape == null) shape = this.selected_shape;
         console.log(shape + "Stamp going to paint at (" + center_x + "," + center_y + ").");
         switch(shape){
-            case "circle":this.paintStampCircle(center_x, center_y, angle); break;
+            case "circle": this.paintStampCircle(center_x, center_y, angle); break;
             case "triangle": this.paintStampTriangle(center_x, center_y, angle); break;
             case "square": this.paintStampSquare(center_x, center_y, angle); break;
-            case "star-shape": this.paintStampStarShape(center_x, center_y, angle); break;
+            case "starshape": this.paintStampStarShape(center_x, center_y, angle); break;
             default : console.log("Any Stamp Shape is not Selected."); break;
         }
     }
@@ -31,7 +75,7 @@ class Painter {
     		originY: 'center',
     		left: center_x,
     		top: center_y,
-    		fill: this.checkColor(),
+    		fill: this.checkColor("circle"),
             opacity: 1.0,
     	});
         
@@ -49,7 +93,7 @@ class Painter {
     		width: this.stamp_size,
     		height: (this.stamp_size * Math.sqrt(3)) / 2,
     		angle: angle,
-    		fill: this.checkColor(),
+    		fill: this.checkColor("triangle"),
             opacity: 1.0,
     	});
     	console.log("Triangle Stamp at (" + center_x + "," + center_y + ").");
@@ -66,7 +110,7 @@ class Painter {
 	    	width: this.stamp_size / 1,
 	    	height: this.stamp_size / 1,
 		    angle: angle,
-		    fill: this.checkColor(),
+		    fill: this.checkColor("square"),
             opacity: 1.0,
 	    });
 	    console.log("Square Stamp at (" + center_x + "," + center_y + ").");
@@ -90,7 +134,7 @@ class Painter {
             scaleX: this.stamp_size / 25,
             scaleY: this.stamp_size / 25,            
             angle: angle,
-    		fill: this.checkColor(),
+    		fill: this.checkColor("starshape"),
             opacity: 1.0,
         });
         console.log("Star Shape Stamp at (" + center_x + "," + center_y + ").");
