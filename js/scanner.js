@@ -4,7 +4,7 @@ class Scanner{
         //this.scanText = document.createElement("span");
         //this.scanner.append(this.scanText);
 
-        if(param.text)this.scanText.textContent = param.text;
+        //if(param.text)this.scanText.textContent = param.text;
         if (param.posX) this.scanner.style.left = param.posX;
         if (param.posY) this.scanner.style.top = param.posY;
         if (param.width) this.scanner.style.width = param.width;

@@ -17,7 +17,7 @@ class App{
         this.canvas.setHeight(540);
         
         this.input_scanner = new InputScanner({
-            element: "input-scanners",
+            element: "color-change-scanner",
             posX: "8px", //body-tag's margin is 8px.
             posY: "188px", //body-tag's margin is 8px + div-tags' height 60 * 3.
             width: "780px", //比率は2480×3508に近くなるようにしたい
@@ -39,7 +39,7 @@ class App{
 
         this.paint_scanner = new PaintScanner(
             {
-            element: "input-scanners",
+            element: "paint-canvas-scanner",
             posX: "8px", //body-tag's margin is 8px.
             posY: "188px", //body-tag's margin is 8px + div-tags' height 60 * 3.
             width: "764px",
