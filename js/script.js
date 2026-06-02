@@ -79,22 +79,4 @@ class App{
 			alert(`エラー: ${ e }`);
 		}
 	}
-
-    //スキャナーを出す
-    activateScanner(element_scanner){
-        if(element_scanner.classList.contains("invisible")){
-            element_scanner.classList.remove("invisible");
-        }
-        //this.isActive = true;
-        console.log("Scanner is Activated.");
-        
-    }
-    //スキャナーを消す
-    deactivateScanner(element_scanner){
-        if(!element_scanner.classList.contains("invisible")){
-            element_scanner.classList.add("invisible");
-        }
-        //this.isActive = false;
-        console.log("Scanner is Deactivated.");
-    }
 }

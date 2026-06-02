@@ -39,6 +39,7 @@ class Painter {
         document.getElementById("square-icon").style.color = "#888888";
         document.getElementById("starshape-icon").style.color = "#888888";
 
+        this._deactivateScanner("paint-canvas-scanner");
         canvas.isDrawingMode = true;
 
     }
@@ -50,7 +51,26 @@ class Painter {
         document.getElementById("square-icon").style.color = checkColor("square");
         document.getElementById("starshape-icon").style.color = checkColor("starshape");
 
+        this._activateScanner("paint-canvas-scanner");
         canvas.isDrawingMode = false;
+    }
+
+    //スキャナーを出す
+    _activateScanner(element_scanner){
+        if(element_scanner.classList.contains("invisible")){
+            element_scanner.classList.remove("invisible");
+        }
+        //this.isActive = true;
+        console.log("Scanner is Activated.");
+        
+    }
+    //スキャナーを消す
+    _deactivateScanner(element_scanner){
+        if(!element_scanner.classList.contains("invisible")){
+            element_scanner.classList.add("invisible");
+        }
+        //this.isActive = false;
+        console.log("Scanner is Deactivated.");
     }
 
     //スタンプが押されると、種類に応じて描画
