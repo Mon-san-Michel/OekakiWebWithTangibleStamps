@@ -58,7 +58,7 @@ class Painter {
     //スキャナーを出す
     _activateScanner(scanner_name){
         let element_scanner = document.getElementById(scanner_name);
-        if(document.getElementById("element_scanner").classList.contains("invisible")){
+        if(element_scanner.classList.contains("invisible")){
             element_scanner.classList.remove("invisible");
         }
         //this.isActive = true;
