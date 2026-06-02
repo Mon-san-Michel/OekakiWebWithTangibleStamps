@@ -58,7 +58,7 @@ class Scanner{
             /**/
         });
 
-        document.getElementById("text_result").textContent = param.element + "is active.";
+        document.getElementById("text_result").textContent = param.element + " is active.";
     }
     // ================================================================================================ Actions
 

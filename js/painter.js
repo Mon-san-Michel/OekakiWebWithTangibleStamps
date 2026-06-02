@@ -32,7 +32,7 @@ class Painter {
     }
 
     _ToolChangeToPen(){
-        document.getElementById("pen-icon").style.color = checkColor("pen");
+        document.getElementById("pen-icon").style.color = this.checkColor("pen");
 
         document.getElementById("circle-icon").style.color = "#888888"; //カラーブレンド用の関数にして、元の色がわかるようにするべきかも
         document.getElementById("triangle-icon").style.color = "#888888";
@@ -46,10 +46,10 @@ class Painter {
     _ToolChangeToStamp(){
         document.getElementById("pen-icon").style.color = "#888888";
 
-        document.getElementById("circle-icon").style.color = checkColor("circle");
-        document.getElementById("triangle-icon").style.color = checkColor("triangle");
-        document.getElementById("square-icon").style.color = checkColor("square");
-        document.getElementById("starshape-icon").style.color = checkColor("starshape");
+        document.getElementById("circle-icon").style.color = this.checkColor("circle");
+        document.getElementById("triangle-icon").style.color = this.checkColor("triangle");
+        document.getElementById("square-icon").style.color = this.checkColor("square");
+        document.getElementById("starshape-icon").style.color = this.checkColor("starshape");
 
         this._activateScanner("paint-canvas-scanner");
         canvas.isDrawingMode = false;
