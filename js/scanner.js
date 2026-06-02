@@ -73,7 +73,6 @@ class Scanner{
     touchAction(event){
         const touches = Array.from(event.touches).filter(touch => touch.target === this.scanner);
         
-
         if (touches.length == 3) {
             event.preventDefault();
             /*--document.getElementById("text_result").innnerHTML = touches;--*/
@@ -160,12 +159,12 @@ class Scanner{
         // Measure distances
         this.minDistance = Number.MAX_SAFE_INTEGER;
         this.maxDistance = 0;
-        /*    
+         
         document.getElementById("text_result").textContent = "touched at " + touches.length + " points.";
         document.getElementById("text_result1").textContent = "1(x,y) = (" + this.touchPos[0].x + "," + this.touchPos[0].y + ").";
         document.getElementById("text_result2").textContent = "2(x,y) = (" + this.touchPos[1].x + "," + this.touchPos[1].y + ").";
         document.getElementById("text_result3").textContent = "3(x,y) = (" + this.touchPos[2].x + "," + this.touchPos[2].y + ").";
-        */
+        
         for (let i=0; i < touches.length; i++) {
             for (let j = i+1; j < touches.length; j++) {
                 const dx = this.touchPos[j].x - this.touchPos[i].x;
@@ -312,7 +311,7 @@ class InputScanner extends Scanner{
             this.painter.changeColor(selected_tool, selected_color);
         }
         //document.getElementById("text_result").textContent = "Color of " + selected_tool + " is changed to " + selected_color + ".";
-        document.getElementById("text_result").textContent = "(markerId, minDistance, maxDistance) = (" + this.markerId + ", " + this.minDistance + ", " + this.maxDistance + ").";
+        //document.getElementById("text_result").textContent = "(markerId, minDistance, maxDistance) = (" + this.markerId + ", " + this.minDistance + ", " + this.maxDistance + ").";
     }
     
     clickAction(event){
