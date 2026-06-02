@@ -67,6 +67,11 @@ class Scanner{
             event.preventDefault();
             /*--document.getElementById("text_result").innnerHTML = touches;--*/
             this.readMarker(touches);
+        } else if(touches.length == 1){
+            event.preventDefault();
+            this.posX = touches[0].clientX - this.scanner.getBoundingClientRect().left;
+            this.posY = touches[0].clientY - this.scanner.getBoundingClientRect().top;
+            this.markerId = 0;
         }
     }
 
@@ -258,8 +263,7 @@ class InputScanner extends Scanner{
 
     touchAction(event){
         let selected_tool = "pen";
-        let selected_color = "#000000";
-        this.markerId = 0;
+        let selected_color = "#FF00FF";
 
         super.touchAction(event);
         
@@ -307,8 +311,7 @@ class PaintScanner extends Scanner{
     }
 
     touchAction(event){
-        let selected_tool = "pen";
-        this.markerId = 0;
+        let selected_tool = "";
 
         super.touchAction(event);
         
