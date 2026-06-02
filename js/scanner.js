@@ -273,7 +273,7 @@ class InputScanner extends Scanner{
     }
 
     touchAction(event){
-        let selected_tool = "pen";
+        let selected_tool = "";
         let selected_color = "#FF00FF";
 
         super.touchAction(event);
@@ -315,7 +315,7 @@ class InputScanner extends Scanner{
     }
     
     clickAction(event){
-        let selected_tool = "pen";
+        let selected_tool = "";
         let selected_color = "#FF00FF";
 
         super.clickAction(event);
@@ -364,7 +364,7 @@ class PaintScanner extends Scanner{
     }
 
     touchAction(event){
-        let selected_tool = "pen";
+        let selected_tool = "";
 
         super.touchAction(event);
         
@@ -389,7 +389,7 @@ class PaintScanner extends Scanner{
     }
 
     clickAction(event){
-        let selected_tool = "pen";
+        let selected_tool = "";
 
         super.clickAction(event);
 
