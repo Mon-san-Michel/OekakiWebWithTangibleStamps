@@ -62,6 +62,14 @@ class Scanner{
     }
     // ================================================================================================ Actions
 
+    clickAction(event){
+        event.preventDefault();
+        this.posX = event.offsetX;
+        this.posY = event.offsetY;
+        this.degrees = 0;
+        this.markerId = 2;
+        console.log("clicked at (" + this.posX + "," + this.posY + ").");
+    }
     touchAction(event){
         const touches = Array.from(event.touches).filter(touch => touch.target === this.scanner);
         
@@ -305,6 +313,48 @@ class InputScanner extends Scanner{
         }
         document.getElementById("text_result").textContent = "Color of " + selected_tool + " is changed to " + selected_color + ".";
     }
+    
+    clickAction(event){
+        let selected_tool = "pen";
+        let selected_color = "#FF00FF";
+
+        super.clickAction(event);
+
+        //markerIdからツールを指定。
+        switch(this.markerId){
+            case 0 : selected_tool = "pen"; break;
+            case 2 : selected_tool = "circle"; break;
+            case 4 : selected_tool = "triangle"; break;
+            case 9 : selected_tool = "square"; break;
+            case 13 : selected_tool = "starshape"; break;
+        }
+        //this.posXとthis.posYから色を指定。
+        if(this.posY < 240){
+            if(this.posX < 240){
+                selected_color="#FF0000";
+            }else if(this.posX <480){
+                selected_color="#0000FF";
+            }else{
+                selected_color="#00BB00";
+            }
+        }else{
+            if(this.posX < 240){
+                selected_color="#000000";
+            }else if(this.posX <480){
+                selected_color="#FFFFFF";
+            }else{
+                selected_color="#FFFF00";
+            }
+        }
+
+        if(this.markerId == 0){
+            this.painter._ToolChangeToPen();
+        } else {
+            this.painter._ToolChangeToStamp();
+            this.painter.changeColor(selected_tool, selected_color);
+        }
+        document.getElementById("text_result").textContent = "Color of " + selected_tool + " is changed to " + selected_color + ".";
+    }
 }
 
 class PaintScanner extends Scanner{
@@ -314,13 +364,35 @@ class PaintScanner extends Scanner{
     }
 
     touchAction(event){
-        let selected_tool = "";
+        let selected_tool = "pen";
 
         super.touchAction(event);
         
         //markerIdからツールを指定。
         //this.posXとthis.posYからスタンプを押す座標を指定。
         //this.degreesで角度を指定。
+        switch(this.markerId){
+            case 0 : selected_tool = "pen"; break;
+            case 2 : selected_tool = "circle"; break;
+            case 4 : selected_tool = "triangle"; break;
+            case 9 : selected_tool = "square"; break;
+            case 13 : selected_tool = "starshape"; break;
+        }
+        if(this.markerId == 0){
+            this.painter._ToolChangeToPen();
+            document.getElementById("text_result").textContent = selected_tool + "is active.";
+        } else {
+            this.painter._ToolChangeToStamp();
+            this.painter.paintStamp(this.posX, this.posY, this.degrees, selected_tool);
+            document.getElementById("text_result").textContent = "Stamp of " + selected_tool + " is painted at (" + this.posX + "," + this.posY + ").";
+        }
+    }
+
+    clickAction(event){
+        let selected_tool = "pen";
+
+        super.clickAction(event);
+
         switch(this.markerId){
             case 0 : selected_tool = "pen"; break;
             case 2 : selected_tool = "circle"; break;
