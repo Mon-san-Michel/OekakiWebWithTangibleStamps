@@ -311,7 +311,7 @@ class InputScanner extends Scanner{
             this.painter._ToolChangeToStamp();
             this.painter.changeColor(selected_tool, selected_color);
         }
-        document.getElementById("text_result").textContent = "Color of " + selected_tool + " is changed to " + selected_color + ".";
+        document.getElementById("text_result").textContent = "markerId = " + this.markerId + " : Color of " + selected_tool + " is changed to " + selected_color + ".";
     }
     
     clickAction(event){
