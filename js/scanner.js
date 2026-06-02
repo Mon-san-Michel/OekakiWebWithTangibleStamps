@@ -57,11 +57,14 @@ class Scanner{
         this.scanner.addEventListener("touchend", (event) => {
             /**/
         });
+
+        document.getElementById("text_result").textContent = param.element + "is active.";
     }
     // ================================================================================================ Actions
 
     touchAction(event){
         const touches = Array.from(event.touches).filter(touch => touch.target === this.scanner);
+        
 
         if (touches.length == 3) {
             event.preventDefault();
