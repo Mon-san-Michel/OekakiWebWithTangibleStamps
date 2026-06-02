@@ -56,8 +56,9 @@ class Painter {
     }
 
     //スキャナーを出す
-    _activateScanner(element_scanner){
-        if(element_scanner.classList.contains("invisible")){
+    _activateScanner(scanner_name){
+        let element_scanner = document.getElementById(scanner_name);
+        if(document.getElementById("element_scanner").classList.contains("invisible")){
             element_scanner.classList.remove("invisible");
         }
         //this.isActive = true;
@@ -65,7 +66,8 @@ class Painter {
         
     }
     //スキャナーを消す
-    _deactivateScanner(element_scanner){
+    _deactivateScanner(scanner_name){
+        let element_scanner = document.getElementById(scanner_name);
         if(!element_scanner.classList.contains("invisible")){
             element_scanner.classList.add("invisible");
         }
