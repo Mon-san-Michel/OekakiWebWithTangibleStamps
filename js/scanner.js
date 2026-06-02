@@ -290,6 +290,7 @@ class InputScanner extends Scanner{
         }
 
         this.painter.changeColor(selected_tool, selected_color);
+        document.getElementById("text_result").textContent = "Color of " + selected_tool + " is changed to " + selected_color + ".";
     }
 }
 
@@ -317,6 +318,7 @@ class PaintScanner extends Scanner{
         }
         
         this.painter.paintStamp(this.posX, this.posY, this.degrees, selected_tool);
+        document.getElementById("text_result").textContent = "Stamp of " + selected_tool + " is painted at (" + this.posX + "," + this.posY + ").";
 
     }
 }
