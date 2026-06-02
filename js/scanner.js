@@ -312,7 +312,7 @@ class InputScanner extends Scanner{
             this.painter.changeColor(selected_tool, selected_color);
         }
         //document.getElementById("text_result").textContent = "Color of " + selected_tool + " is changed to " + selected_color + ".";
-        document.getElementById("text_result").textContent = "(markerId, minId, maxId) = (" + this.markerId + ", " + this.minId + ", " + this.maxId + ").";
+        document.getElementById("text_result").textContent = "(markerId, minDistance, maxDistance) = (" + this.markerId + ", " + this.minDistance + ", " + this.maxDistance + ").";
     }
     
     clickAction(event){
