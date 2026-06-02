@@ -301,7 +301,7 @@ class InputScanner extends Scanner{
 }
 
 class PaintScanner extends Scanner{
-    constructor(param, canvas, painter){
+    constructor(param, painter){
         super(param);
         this.painter = painter;
     }

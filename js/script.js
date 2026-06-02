@@ -52,7 +52,7 @@ class App{
             // showResult: true,
             // showDot: true,
             // dotColor: "#4771ed",
-        }, this.canvas, this.painter);
+        }, this.painter);
         
         // Scanner ID Setup (works for Redmi Tab only)
         this.paint_scanner.setId({
