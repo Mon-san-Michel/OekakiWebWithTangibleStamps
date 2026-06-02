@@ -32,7 +32,7 @@ class Scanner{
         
         this.dots = {};
         this.touchPos = [];
-        this.updated = false;
+        //this.updated = false;
         this.referenceId = undefined;
         this.startTime = null;
 
@@ -227,13 +227,13 @@ class Scanner{
                     case 2 : this.markerId = maxId + 5; break;
                     case 3 : this.markerId = maxId + 9; break;
                     case 4 : this.markerId = maxId + 12; break;
-                    //case 5 : this.markerId = maxId + 14; break;
-                    //case 6 : this.markerId = maxId + 15; break;
+                    case 5 : this.markerId = maxId + 14; break;
+                    case 6 : this.markerId = maxId + 15; break;
                 }
             }
             
             //document.getElementById("text_result3").textContent = "readMarker is actually active?";
-            this.updated = true;
+            //this.updated = true;
 
         // ================================================================================= Timer
         // Remove dot after a few miliseconds
@@ -251,27 +251,72 @@ class Scanner{
     
 }
 class InputScanner extends Scanner{
-    constructor(param, color){
+    constructor(param, painter){
         super(param);
+        this.painter = painter;
     }
 
     touchAction(event){
+        let selected_tool = "pen";
+        let selected_color = "#000000";
+        this.markerId = 0;
         super.touchAction(event);
-        //this.posXとthis.posYから色を指定。
+        
         //markerIdからツールを指定。
+        switch(this.markerId){
+            case 0 : selected_tool = "pen"; break;
+            case 2 : selected_tool = "circle"; break;
+            case 4 : selected_tool = "triangle"; break;
+            case 9 : selected_tool = "square"; break;
+            case 13 : selected_tool = "starshape"; break;
+        }
+        //this.posXとthis.posYから色を指定。
+        if(this.posY <240){
+            if(this.posX < 240){
+                selected_color="#FF0000";
+            }else if(this.posX <480){
+                selected_color="#0000FF";
+            }else{
+                selected_color="#00BB00";
+            }
+        }else{
+            if(this.posX < 240){
+                selected_color="#000000";
+            }else if(this.posX <480){
+                selected_color="#FFFFFF";
+            }else{
+                selected_color="#FFFF00";
+            }
+        }
+
+        this.painter.changeColor(selected_tool, selected_color);
     }
 }
 
 class PaintScanner extends Scanner{
-    constructor(param, canvas){
+    constructor(param, canvas, painter){
         super(param);
-        this.painter = new Painter(canvas);
+        this.painter = painter;
     }
 
     touchAction(event){
+        let selected_tool = "pen";
+        this.markerId = 0;
+
         super.touchAction(event);
+        
+        //markerIdからツールを指定。
         //this.posXとthis.posYからスタンプを押す座標を指定。
         //this.degreesで角度を指定。
-        //markerIdからツールを指定。
+        switch(this.markerId){
+            case 0 : selected_tool = "pen"; break;
+            case 2 : selected_tool = "circle"; break;
+            case 4 : selected_tool = "triangle"; break;
+            case 9 : selected_tool = "square"; break;
+            case 13 : selected_tool = "starshape"; break;
+        }
+        
+        this.painter.paintStamp(this.posX, this.posY, this.degrees, selected_tool);
+
     }
 }

@@ -13,6 +13,7 @@ class App{
         
         //canvas setting
         this.canvas = canvas;
+        this.painter = new Painter(canvas)
         this.canvas.setWidth(720);
         this.canvas.setHeight(540);
         
@@ -29,7 +30,7 @@ class App{
             // showResult: true,
             // showDot: true,
             // dotColor: "#4771ed",
-        }/*, color*/);
+        }, this.painter);
         
         // Scanner ID Setup (works for Redmi Tab only)
         this.input_scanner.setId({
@@ -51,7 +52,7 @@ class App{
             // showResult: true,
             // showDot: true,
             // dotColor: "#4771ed",
-        }, this.canvas);
+        }, this.canvas, this.painter);
         
         // Scanner ID Setup (works for Redmi Tab only)
         this.paint_scanner.setId({
