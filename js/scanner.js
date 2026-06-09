@@ -310,7 +310,7 @@ class InputScanner extends Scanner{
             this.painter._ToolChangeToStamp();
             this.painter.changeColor(selected_tool, selected_color);
         }
-        document.getElementById("text_result").textContent = "markerId = " + this.markerId + ".";
+        //document.getElementById("text_result").textContent = "markerId = " + this.markerId + ".";
         //document.getElementById("text_result").textContent = "Color of " + selected_tool + " is changed to " + selected_color + ".";
         //document.getElementById("text_result").textContent = "(markerId, minDistance, maxDistance) = (" + this.markerId + ", " + this.minDistance + ", " + this.maxDistance + ").";
     }
@@ -388,7 +388,7 @@ class PaintScanner extends Scanner{
             //this.painter._ToolChangeToStamp();
             this.painter.paintStamp(this.posX, this.posY, this.degrees, selected_tool);
             //document.getElementById("text_result").textContent = "Stamp of " + selected_tool + " is painted at (" + this.posX + "," + this.posY + ").";
-            document.getElementById("text_result").textContent = "markerId = " + this.markerId + ".";
+            //document.getElementById("text_result").textContent = "markerId = " + this.markerId + ".";
         }
     }
 

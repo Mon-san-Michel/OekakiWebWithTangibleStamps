@@ -79,6 +79,7 @@ class Painter {
     paintStamp(center_x, center_y, angle, shape){
         //if(shape == null) shape = this.selected_shape;
         console.log(shape + "Stamp going to paint at (" + center_x + "," + center_y + ").");
+        document.getElementById("text_result").textContent = shape + "Stamp going to paint at (" + center_x + "," + center_y + ").";
         switch(shape){
             case "circle": this.paintStampCircle(center_x, center_y, angle); break;
             case "triangle": this.paintStampTriangle(center_x, center_y, angle); break;
@@ -120,6 +121,7 @@ class Painter {
             opacity: 1.0,
     	});
     	console.log("Triangle Stamp at (" + center_x + "," + center_y + ").");
+        document.getElementById("text_result").textContent = "Triangle Stamp at (" + center_x + "," + center_y + ").";
     	this.canvas.add(triangle);
     }
     
@@ -137,6 +139,7 @@ class Painter {
             opacity: 1.0,
 	    });
 	    console.log("Square Stamp at (" + center_x + "," + center_y + ").");
+        document.getElementById("text_result").textContent = "Square Stamp at (" + center_x + "," + center_y + ").";
 	    this.canvas.add(square);
     }
 
@@ -161,6 +164,7 @@ class Painter {
             opacity: 1.0,
         });
         console.log("Star Shape Stamp at (" + center_x + "," + center_y + ").");
+        document.getElementById("text_result").textContent = "Star Shape Stamp at (" + center_x + "," + center_y + ").";
         this.canvas.add(starshape);
     }
 
