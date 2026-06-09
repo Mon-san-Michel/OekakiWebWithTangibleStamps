@@ -62,14 +62,14 @@ class Scanner{
     }
     // ================================================================================================ Actions
 
-    clickAction(event){
+    /*clickAction(event){
         event.preventDefault();
         this.posX = event.offsetX;
         this.posY = event.offsetY;
         this.degrees = 0;
         this.markerId = 2;
         console.log("clicked at (" + this.posX + "," + this.posY + ").");
-    }
+    }*/
     touchAction(event){
         const touches = Array.from(event.touches).filter(touch => touch.target === this.scanner);
         
@@ -315,7 +315,7 @@ class InputScanner extends Scanner{
         //document.getElementById("text_result").textContent = "(markerId, minDistance, maxDistance) = (" + this.markerId + ", " + this.minDistance + ", " + this.maxDistance + ").";
     }
     
-    clickAction(event){
+    /*clickAction(event){
         let selected_tool = "";
         let selected_color = "#FF00FF";
 
@@ -356,7 +356,7 @@ class InputScanner extends Scanner{
         }
         //document.getElementById("text_result").textContent = "Color of " + selected_tool + " is changed to " + selected_color + ".";
         document.getElementById("text_result").textContent = "markerId = " + this.markerId + ".";
-    }
+    }*/
 }
 
 class PaintScanner extends Scanner{
@@ -392,7 +392,7 @@ class PaintScanner extends Scanner{
         }
     }
 
-    clickAction(event){
+    /*clickAction(event){
         let selected_tool = "";
 
         super.clickAction(event);
@@ -414,5 +414,5 @@ class PaintScanner extends Scanner{
             //document.getElementById("text_result").textContent = "Stamp of " + selected_tool + " is painted at (" + this.posX + "," + this.posY + ").";
             //document.getElementById("text_result").textContent = "markerId = " + this.markerId + ".";
         }
-    }
+    }*/
 }
