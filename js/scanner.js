@@ -77,12 +77,12 @@ class Scanner{
             event.preventDefault();
             /*--document.getElementById("text_result").innnerHTML = touches;--*/
             this.readMarker(touches);
-        } /*else if(touches.length == 1){
-            event.preventDefault();
+        } else if(touches.length == 1){
+            //event.preventDefault();
             this.posX = touches[0].clientX - this.scanner.getBoundingClientRect().left;
             this.posY = touches[0].clientY - this.scanner.getBoundingClientRect().top;
             this.markerId = 0;
-        }*/
+        }
     }
 
     // ================================================================================================ SETTERS
@@ -308,8 +308,8 @@ class InputScanner extends Scanner{
             this.painter._ToolChangeToPen();
         } else {
             this.painter._ToolChangeToStamp();
-            this.painter.changeColor(selected_tool, selected_color);
         }
+        this.painter.changeColor(selected_tool, selected_color);
         //document.getElementById("text_result").textContent = "markerId = " + this.markerId + ".";
         //document.getElementById("text_result").textContent = "Color of " + selected_tool + " is changed to " + selected_color + ".";
         //document.getElementById("text_result").textContent = "(markerId, minDistance, maxDistance) = (" + this.markerId + ", " + this.minDistance + ", " + this.maxDistance + ").";

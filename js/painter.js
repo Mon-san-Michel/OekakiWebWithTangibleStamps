@@ -101,10 +101,9 @@ class Painter {
     		fill: this.checkColor("circle"),
             opacity: 1.0,
     	});
-        
+    	this.canvas.add(circle);
     	console.log(" Circle Stamp at (" + center_x + "," + center_y + ").");
         document.getElementById("text_result").textContent = " Circle Stamp at (" + center_x + "," + center_y + ").";
-    	this.canvas.add(circle);
     }
 
     //三角
@@ -120,9 +119,9 @@ class Painter {
     		fill: this.checkColor("triangle"),
             opacity: 1.0,
     	});
+    	this.canvas.add(triangle);
     	console.log("Triangle Stamp at (" + center_x + "," + center_y + ").");
         document.getElementById("text_result").textContent = "Triangle Stamp at (" + center_x + "," + center_y + ").";
-    	this.canvas.add(triangle);
     }
     
     //四角
@@ -138,9 +137,9 @@ class Painter {
 		    fill: this.checkColor("square"),
             opacity: 1.0,
 	    });
+        this.canvas.add(square);
 	    console.log("Square Stamp at (" + center_x + "," + center_y + ").");
         document.getElementById("text_result").textContent = "Square Stamp at (" + center_x + "," + center_y + ").";
-	    this.canvas.add(square);
     }
 
     //星型
@@ -163,9 +162,9 @@ class Painter {
     		fill: this.checkColor("starshape"),
             opacity: 1.0,
         });
+        this.canvas.add(starshape);
         console.log("Star Shape Stamp at (" + center_x + "," + center_y + ").");
         document.getElementById("text_result").textContent = "Star Shape Stamp at (" + center_x + "," + center_y + ").";
-        this.canvas.add(starshape);
     }
 
     //スタンプの削除

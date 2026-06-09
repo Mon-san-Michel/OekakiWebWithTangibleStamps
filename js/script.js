@@ -16,6 +16,7 @@ class App{
         this.painter = new Painter(canvas)
         this.canvas.setWidth(720);
         this.canvas.setHeight(540);
+
         
         this.input_scanner = new InputScanner({
             element: "color-change-scanner",
@@ -59,6 +60,8 @@ class App{
             minDistance: 80,
             maxDistance: 182,
         });
+
+        document.getElementById("save-canvas").addEventListener('click', (event) => {this.writeFile();});
     }
 
     init(){
