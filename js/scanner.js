@@ -281,9 +281,9 @@ class InputScanner extends Scanner{
         switch(this.markerId){
             case 0 : selected_tool = "pen"; break;
             case 2 : selected_tool = "circle"; break;
-            case 4 : selected_tool = "triangle"; break;
-            case 9 : selected_tool = "square"; break;
-            case 13 : selected_tool = "starshape"; break;
+            case 3 : selected_tool = "triangle"; break;
+            case 5 : selected_tool = "square"; break;
+            case 8 : selected_tool = "starshape"; break;
         }
         //this.posXとthis.posYから色を指定。
         if(this.posY < 240){
@@ -325,9 +325,9 @@ class InputScanner extends Scanner{
         switch(this.markerId){
             case 0 : selected_tool = "pen"; break;
             case 2 : selected_tool = "circle"; break;
-            case 4 : selected_tool = "triangle"; break;
-            case 9 : selected_tool = "square"; break;
-            case 13 : selected_tool = "starshape"; break;
+            case 3 : selected_tool = "triangle"; break;
+            case 5 : selected_tool = "square"; break;
+            case 8 : selected_tool = "starshape"; break;
         }
         //this.posXとthis.posYから色を指定。
         if(this.posY < 240){
@@ -376,9 +376,9 @@ class PaintScanner extends Scanner{
         switch(this.markerId){
             case 0 : selected_tool = "pen"; break;
             case 2 : selected_tool = "circle"; break;
-            case 4 : selected_tool = "triangle"; break;
-            case 9 : selected_tool = "square"; break;
-            case 13 : selected_tool = "starshape"; break;
+            case 3 : selected_tool = "triangle"; break;
+            case 5 : selected_tool = "square"; break;
+            case 8 : selected_tool = "starshape"; break;
         }
         /*if(this.markerId == 0){
             this.painter._ToolChangeToPen();
@@ -400,9 +400,9 @@ class PaintScanner extends Scanner{
         switch(this.markerId){
             case 0 : selected_tool = "pen"; break;
             case 2 : selected_tool = "circle"; break;
-            case 4 : selected_tool = "triangle"; break;
-            case 9 : selected_tool = "square"; break;
-            case 13 : selected_tool = "starshape"; break;
+            case 3 : selected_tool = "triangle"; break;
+            case 5 : selected_tool = "square"; break;
+            case 8 : selected_tool = "starshape"; break;
         }
         /*if(this.markerId == 0){
             this.painter._ToolChangeToPen();
