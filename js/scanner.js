@@ -38,11 +38,11 @@ class Scanner{
 
         //eventlistener for PCs.
         
-        this.scanner.addEventListener("click", (event) => {
+        /*this.scanner.addEventListener("click", (event) => {
             //this.startAction(event);
             // this.endAction(event);
             this.clickAction(event);
-        });
+        });*/
         
         
         //eventlistener for Tabs.
