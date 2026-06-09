@@ -378,14 +378,14 @@ class PaintScanner extends Scanner{
             case 9 : selected_tool = "square"; break;
             case 13 : selected_tool = "starshape"; break;
         }
-        if(this.markerId == 0){
+        /*if(this.markerId == 0){
             this.painter._ToolChangeToPen();
             document.getElementById("text_result").textContent = selected_tool + " is active.";
-        } else {
+        } else {*/
             this.painter._ToolChangeToStamp();
             this.painter.paintStamp(this.posX, this.posY, this.degrees, selected_tool);
             document.getElementById("text_result").textContent = "Stamp of " + selected_tool + " is painted at (" + this.posX + "," + this.posY + ").";
-        }
+        /*}*/
     }
 
     clickAction(event){
