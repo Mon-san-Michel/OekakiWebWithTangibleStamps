@@ -160,7 +160,7 @@ class Scanner{
         this.minDistance = Number.MAX_SAFE_INTEGER;
         this.maxDistance = 0;
          
-        document.getElementById("text_result").textContent = "touched at " + touches.length + " points.";
+        //document.getElementById("text_result").textContent = "touched at " + touches.length + " points.";
         document.getElementById("text_result1").textContent = "1(x,y) = (" + this.touchPos[0].x + "," + this.touchPos[0].y + ").";
         document.getElementById("text_result2").textContent = "2(x,y) = (" + this.touchPos[1].x + "," + this.touchPos[1].y + ").";
         document.getElementById("text_result3").textContent = "3(x,y) = (" + this.touchPos[2].x + "," + this.touchPos[2].y + ").";
@@ -310,6 +310,7 @@ class InputScanner extends Scanner{
             this.painter._ToolChangeToStamp();
             this.painter.changeColor(selected_tool, selected_color);
         }
+        document.getElementById("text_result").textContent = "markerId = " + this.markerId + ".";
         //document.getElementById("text_result").textContent = "Color of " + selected_tool + " is changed to " + selected_color + ".";
         //document.getElementById("text_result").textContent = "(markerId, minDistance, maxDistance) = (" + this.markerId + ", " + this.minDistance + ", " + this.maxDistance + ").";
     }
@@ -353,7 +354,8 @@ class InputScanner extends Scanner{
             this.painter._ToolChangeToStamp();
             this.painter.changeColor(selected_tool, selected_color);
         }
-        document.getElementById("text_result").textContent = "Color of " + selected_tool + " is changed to " + selected_color + ".";
+        //document.getElementById("text_result").textContent = "Color of " + selected_tool + " is changed to " + selected_color + ".";
+        document.getElementById("text_result").textContent = "markerId = " + this.markerId + ".";
     }
 }
 
@@ -385,7 +387,8 @@ class PaintScanner extends Scanner{
          if(this.markerId != 0){
             //this.painter._ToolChangeToStamp();
             this.painter.paintStamp(this.posX, this.posY, this.degrees, selected_tool);
-            document.getElementById("text_result").textContent = "Stamp of " + selected_tool + " is painted at (" + this.posX + "," + this.posY + ").";
+            //document.getElementById("text_result").textContent = "Stamp of " + selected_tool + " is painted at (" + this.posX + "," + this.posY + ").";
+            document.getElementById("text_result").textContent = "markerId = " + this.markerId + ".";
         }
     }
 
@@ -408,7 +411,8 @@ class PaintScanner extends Scanner{
         if(this.markerId != 0){
             //this.painter._ToolChangeToStamp();
             this.painter.paintStamp(this.posX, this.posY, this.degrees, selected_tool);
-            document.getElementById("text_result").textContent = "Stamp of " + selected_tool + " is painted at (" + this.posX + "," + this.posY + ").";
+            //document.getElementById("text_result").textContent = "Stamp of " + selected_tool + " is painted at (" + this.posX + "," + this.posY + ").";
+            //document.getElementById("text_result").textContent = "markerId = " + this.markerId + ".";
         }
     }
 }
