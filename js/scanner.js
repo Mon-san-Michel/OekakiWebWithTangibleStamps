@@ -403,11 +403,12 @@ class PaintScanner extends Scanner{
             case 3 : selected_tool = "triangle"; break;
             case 5 : selected_tool = "square"; break;
             case 8 : selected_tool = "starshape"; break;
-        }
+        }*/
         /*if(this.markerId == 0){
             this.painter._ToolChangeToPen();
             document.getElementById("text_result").textContent = selected_tool + " is active.";
         } else {*/
+         /*
         if(this.markerId != 0){
             //this.painter._ToolChangeToStamp();
             this.painter.paintStamp(this.posX, this.posY, this.degrees, selected_tool);
