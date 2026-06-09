@@ -78,7 +78,6 @@ class Scanner{
             /*--document.getElementById("text_result").innnerHTML = touches;--*/
             this.readMarker(touches);
         } else if(touches.length == 1){
-            event.preventDefault();
             this.posX = touches[0].clientX - this.scanner.getBoundingClientRect().left;
             this.posY = touches[0].clientY - this.scanner.getBoundingClientRect().top;
             this.markerId = 0;
