@@ -102,6 +102,7 @@ class Painter {
     	});
         
     	console.log(" Circle Stamp at (" + center_x + "," + center_y + ").");
+        document.getElementById("text_result").textContent = " Circle Stamp at (" + center_x + "," + center_y + ").";
     	this.canvas.add(circle);
     }
 
