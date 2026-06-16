@@ -5,7 +5,7 @@
         <meta name="oekaki-web" content="width=device-width, initial-scale=1.0 user-scalable=no">
         <title>お絵描きWeb</title>
         <link rel="stylesheet" href="./css/style.css" type="text/css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=change_history,circle,download,square,star,stylus_note&display=block" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=change_history,circle,download,ink_eraser,square,star,stylus_note&display=block" />
     </head>
     <body>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"></script>
@@ -51,13 +51,17 @@
             <span id="square-icon" class="material-symbols-outlined">square</span>
             <!--★-->
             <span id="starshape-icon" class="material-symbols-outlined">star</span>
-            
+            <!--
+            <button type="button" id="undo-canvas">
+                <span class="material-symbols-outlined">ink_eraser</span>
+            </button>-->
         </div>
-
+        <!--  -->
         <div class="text" id="text_result">message will be wrote here.</div>
         <div class="text" id="text_result1">message will be wrote here.</div>
         <div class="text" id="text_result2">message will be wrote here.</div>
         <div class="text" id="text_result3">message will be wrote here.</div>
+        <!--  -->
 
         <!-- <button onclick="window.location.href = 'Ver1/Ver1index.html'">旧バージョン</button> -->
         <script src="js/script.js"></script>

@@ -7,6 +7,8 @@ class Painter {
         this.triangle_color = "#222222";
         this.square_color = "#222222";
         this.starshape_color = "#222222";
+
+        //document.getElementById("undo-canvas").addEventListener('click', (event) => {this.deleteObject();});
     }
 
     //色の確認
@@ -173,14 +175,14 @@ class Painter {
 
     //スタンプの削除
     
-    deleteObject(canvas) {
-        let target = canvas.getActiveObject();
+    deleteObject() {
+        let target = this.canvas.getActiveObject();
         if(target != null){
-            canvas.remove(target);
+            this.canvas.remove(target);
             console.log("Target is deleted.");
         } else {
             console.log("Any object is not selected.");
         }
-        canvas.requestRenderAll();
+        this.canvas.requestRenderAll();
     }
 }
