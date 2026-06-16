@@ -43,7 +43,7 @@ class Painter {
         this._deactivateScanner("paint-canvas-scanner");
         this.canvas.freeDrawingBrush.width = 5;
         this.canvas.freeDrawingBrush.color = this.checkColor("pen");
-        this.canvas.freeDrawingBrush.opacity = 0.95;
+        //this.canvas.freeDrawingBrush.opacity = 0.95;
         this.canvas.isDrawingMode = true;
 
     }
