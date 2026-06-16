@@ -303,13 +303,14 @@ class InputScanner extends Scanner{
                 selected_color="#FFFF00";
             }
         }*/
-
+        
+        this.painter.changeColor(selected_tool, selected_color);
+        
         if(this.markerId == 0){
             this.painter._ToolChangeToPen();
         } else {
             this.painter._ToolChangeToStamp();
         }
-        this.painter.changeColor(selected_tool, selected_color);
         //document.getElementById("text_result").textContent = "markerId = " + this.markerId + ".";
         //document.getElementById("text_result").textContent = "Color of " + selected_tool + " is changed to " + selected_color + ".";
         //document.getElementById("text_result").textContent = "(markerId, minDistance, maxDistance) = (" + this.markerId + ", " + this.minDistance + ", " + this.maxDistance + ").";

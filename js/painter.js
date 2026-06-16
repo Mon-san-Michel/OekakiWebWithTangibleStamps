@@ -43,6 +43,7 @@ class Painter {
         this._deactivateScanner("paint-canvas-scanner");
         this.canvas.freeDrawingBrush.width = 5;
         this.canvas.freeDrawingBrush.color = this.checkColor("pen");
+        this.canvas.freeDrawingBrush.opacity = 0.95;
         this.canvas.isDrawingMode = true;
 
     }
@@ -102,7 +103,7 @@ class Painter {
     		left: center_x,
     		top: center_y,
     		fill: this.checkColor("circle"),
-            opacity: 1.0,
+            opacity: 0.95,
     	});
     	this.canvas.add(circle);
     	console.log(" Circle Stamp at (" + center_x + "," + center_y + ").");
@@ -120,7 +121,7 @@ class Painter {
     		height: (this.stamp_size * Math.sqrt(3)) / 2,
     		angle: angle,
     		fill: this.checkColor("triangle"),
-            opacity: 1.0,
+            opacity: 0.95,
     	});
     	this.canvas.add(triangle);
     	console.log("Triangle Stamp at (" + center_x + "," + center_y + ").");
@@ -138,7 +139,7 @@ class Painter {
 	    	height: this.stamp_size / 1,
 		    angle: angle,
 		    fill: this.checkColor("square"),
-            opacity: 1.0,
+            opacity: 0.95,
 	    });
         this.canvas.add(square);
 	    console.log("Square Stamp at (" + center_x + "," + center_y + ").");
@@ -163,7 +164,7 @@ class Painter {
             scaleY: this.stamp_size / 25,            
             angle: angle,
     		fill: this.checkColor("starshape"),
-            opacity: 1.0,
+            opacity: 0.95,
         });
         this.canvas.add(starshape);
         console.log("Star Shape Stamp at (" + center_x + "," + center_y + ").");
