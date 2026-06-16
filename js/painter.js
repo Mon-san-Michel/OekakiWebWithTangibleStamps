@@ -41,7 +41,7 @@ class Painter {
         document.getElementById("starshape-icon").style.color = "#888888";
 
         this._deactivateScanner("paint-canvas-scanner");
-        canvas.isDrawingMode = true;
+        this.canvas.isDrawingMode = true;
 
     }
     _ToolChangeToStamp(){
@@ -53,7 +53,7 @@ class Painter {
         document.getElementById("starshape-icon").style.color = this.checkColor("starshape");
 
         this._activateScanner("paint-canvas-scanner");
-        canvas.isDrawingMode = false;
+        this.canvas.isDrawingMode = false;
     }
 
     //スキャナーを出す
