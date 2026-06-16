@@ -41,6 +41,8 @@ class Painter {
         document.getElementById("starshape-icon").style.color = "#888888";
 
         this._deactivateScanner("paint-canvas-scanner");
+        this.canvas.freeDrawingBrush.width = 5;
+        this.canvas.freeDrawingBrush.color = this.checkColor("pen");
         this.canvas.isDrawingMode = true;
 
     }
