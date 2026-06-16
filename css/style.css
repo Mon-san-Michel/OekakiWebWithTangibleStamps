@@ -31,7 +31,7 @@ main{
   border-color: #EEEEFF;
   z-index: 10;
   width: 720px;
-  height: 480px;
+  height: 240px;
 }
 
 .color-input-area-a {
@@ -41,13 +41,13 @@ main{
   height: 240px;
   display: flex;
 }
-.color-input-area-b {
+/*.color-input-area-b {
   position: absolute;
   left: 0px;
   top: 240px;
   height: 240px;
   display: flex;
-}
+}*/
 
 .color-change-palette {
     width: 230px;
@@ -64,6 +64,7 @@ main{
 #green-palette{
   background-color: #00BB00;
 }
+/*
 #black-palette{
   background-color: #000000;
 }
@@ -73,6 +74,7 @@ main{
 #yellow-palette{
   background-color: #FFFF00;
 }
+*/
 /*
 #purple-palette{
   background-color: #8000FF;

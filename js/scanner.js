@@ -286,7 +286,7 @@ class InputScanner extends Scanner{
             case 8 : selected_tool = "starshape"; break;
         }
         //this.posXとthis.posYから色を指定。
-        if(this.posY < 240){
+        //if(this.posY < 240){
             if(this.posX < 240){
                 selected_color="#FF0000";
             }else if(this.posX <480){
@@ -294,7 +294,7 @@ class InputScanner extends Scanner{
             }else{
                 selected_color="#00BB00";
             }
-        }else{
+        /*}else{
             if(this.posX < 240){
                 selected_color="#000000";
             }else if(this.posX <480){
@@ -302,7 +302,7 @@ class InputScanner extends Scanner{
             }else{
                 selected_color="#FFFF00";
             }
-        }
+        }*/
 
         if(this.markerId == 0){
             this.painter._ToolChangeToPen();
