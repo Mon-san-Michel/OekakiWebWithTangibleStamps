@@ -1,7 +1,7 @@
 class Painter {
     constructor(canvas){
         this.canvas = canvas;
-        this.stamp_size = "80";
+        this.stamp_size = "200";
         this.pen_color = "#222222";
         this.circle_color = "#222222";
         this.triangle_color = "#222222";
