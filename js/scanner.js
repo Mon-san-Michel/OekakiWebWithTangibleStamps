@@ -237,7 +237,6 @@ class Scanner{
                 });
     
                 switch (minId) {
-                    //後で適切な4つの選択肢に変えること。
                     case 1 : this.markerId = maxId + 0; break;
                     case 2 : this.markerId = maxId + 5; break;
                     case 3 : this.markerId = maxId + 9; break;
@@ -311,7 +310,7 @@ class InputScanner extends Scanner{
         } else {
             this.painter._ToolChangeToStamp();
         }
-        //document.getElementById("text_result").textContent = "markerId = " + this.markerId + ".";
+        document.getElementById("text_result").textContent = "markerId = " + this.markerId + ".";
         //document.getElementById("text_result").textContent = "Color of " + selected_tool + " is changed to " + selected_color + ".";
         //document.getElementById("text_result").textContent = "(markerId, minDistance, maxDistance) = (" + this.markerId + ", " + this.minDistance + ", " + this.maxDistance + ").";
     }
