@@ -91,8 +91,8 @@ main{
 
   width: 680px;
 
-  border-top-left-radius: 5%;
-  border-top-right-radius: 5%;
+  border-top-left-radius: 40%;
+  border-top-right-radius: 40%;
   background-color: #deb887;
 }
 .color-check-area{
