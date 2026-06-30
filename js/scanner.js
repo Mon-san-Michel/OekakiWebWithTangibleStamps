@@ -310,7 +310,7 @@ class InputScanner extends Scanner{
         } else {
             this.painter._ToolChangeToStamp();
         }
-        document.getElementById("text_result").textContent = "markerId = " + this.markerId + ".";
+        //document.getElementById("text_result").textContent = "markerId = " + this.markerId + ".";
         //document.getElementById("text_result").textContent = "Color of " + selected_tool + " is changed to " + selected_color + ".";
         //document.getElementById("text_result").textContent = "(markerId, minDistance, maxDistance) = (" + this.markerId + ", " + this.minDistance + ", " + this.maxDistance + ").";
     }
