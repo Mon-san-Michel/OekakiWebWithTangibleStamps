@@ -85,8 +85,9 @@ main{
 /* 色確認エリア用 */
 .footer-container{
   position: fixed;
-  left: 15px;
+  left: 0px;
   bottom: 0px;
+  padding: 20px;
 
   width: 720px;
 
